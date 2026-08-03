@@ -202,6 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initContactForm();
   initMatrixRain();
+  initMobileMenu();
 });
 
 /**
@@ -415,4 +416,25 @@ function initMatrixRain() {
   }
 
   setInterval(draw, 35);
+}
+
+/**
+ * Mobile Navigation Drawer Toggle
+ */
+function initMobileMenu() {
+  const menuBtn = document.getElementById('mobile-menu-btn');
+  const navLinks = document.getElementById('nav-links');
+
+  if (menuBtn && navLinks) {
+    menuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+    });
+
+    const links = navLinks.querySelectorAll('a');
+    links.forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+      });
+    });
+  }
 }
