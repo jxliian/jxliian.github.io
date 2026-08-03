@@ -1,0 +1,127 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.48in]{geometry}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{titlesec}
+\usepackage{lmodern}
+
+% Colors
+\definecolor{primarycolor}{RGB}{15, 23, 42}
+\definecolor{accentcolor}{RGB}{79, 70, 229}
+\definecolor{textcolor}{RGB}{51, 65, 85}
+
+% Setup hyperref
+\hypersetup{
+    colorlinks=true,
+    linkcolor=accentcolor,
+    urlcolor=accentcolor,
+    pdftitle={Julián Carrión Tovar - Tech Resume},
+    pdfauthor={Julián Carrión Tovar}
+}
+
+% Style adjustments
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{noitemsep, topsep=1pt, leftmargin=15pt}
+
+% Section formatting
+\titleformat{\section}{\large\bfseries\color{primarycolor}\uppercase}{}{0em}{}[\titlerule]
+\titlespacing*{\section}{0pt}{8pt}{4pt}
+
+\begin{document}
+
+% Header
+\begin{center}
+    {\huge \bfseries \color{primarycolor} Julián Carrión Tovar} \\[3pt]
+    {\color{accentcolor}\bfseries Computer Science \& Business Administration Student} \\[4pt]
+    {\small \color{textcolor}
+    Granada, Spain \ $\cdot$ \ +34 644 955 482 \ $\cdot$ \ \href{mailto:carrionjuliann@gmail.com}{carrionjuliann@gmail.com} \\
+    \href{https://github.com/jxliian}{github.com/jxliian} \ $\cdot$ \ \href{https://jxliian.github.io}{jxliian.github.io}
+    }
+\end{center}
+
+\vspace{-4pt}
+
+% Professional Summary
+\section{Summary}
+Motivated double-degree student in \textbf{Computer Science and Business Administration} at the University of Granada (UGR). Combines low-level software engineering capabilities with strategic business modeling. Awarded Course Honors in Statistics (9.8/10) and Web Interface Design (9.4/10). Top 1\% high school score with a University Access Score of \textbf{13.005/14.000}. Fluent in English (\textbf{C1 Cambridge Certified}) and Spanish.
+
+% Education & Academic Achievements
+\section{Education \& Academic Honors}
+\textbf{University of Granada (ETSIIT \& Faculty of Economics)} \hfill Granada, Spain \\
+\textit{B.S. in Computer Science \& B.A. in Business Administration (Double Degree)} \hfill \textit{Sep 2022 -- Present}
+\begin{itemize}
+    \item \textbf{Academic Honors (Matrículas de Honor):} Awarded Course Honors in \textbf{Quantitative Techniques (9.8/10)} (Statistics, Probability \& Data Analysis) and \textbf{User Interface Design (9.4/10)} (UI/UX Architecture \& Web Development).
+    \item \textbf{Relevant Coursework:} Data Structures \& Algorithms, Systems Programming, Object-Oriented Design, Operating Systems, Relational Databases (SQL), Software Engineering, Financial Management.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{I.E.S. José Martín Recuerda} \hfill Motril, Spain \\
+\textit{High School Diploma in Social Sciences \& Applied Mathematics} \hfill \textit{Sep 2020 -- Jun 2022}
+\begin{itemize}
+    \item \textbf{GPA:} 9.9/10 (Awarded Academic Excellence Honor) $\cdot$ \textbf{University Entrance Exam (EBAU):} 13.005 / 14.000.
+\end{itemize}
+
+% Technical Skills
+\section{Technical Skills \& Languages}
+\begin{itemize}
+    \item \textbf{Programming Languages:} Python, C++, Java, C, JavaScript, SQL, Bash.
+    \item \textbf{Tools \& Frameworks:} Git, GitHub, Docker, Linux CLI, Flex/Lex, HTML5/CSS3.
+    \item \textbf{Core Competencies:} Systems Programming, Object-Oriented Architecture, Data Analysis, Agent-Based Modeling (ABM), Software Testing.
+    \item \textbf{Languages:} Spanish (Native), English (\textbf{C1 Advanced -- Cambridge Certificate}), French (Elementary).
+\end{itemize}
+
+% Software Projects
+\section{Featured Software Engineering Projects}
+
+\textbf{repasaYA} \ $\cdot$ \ \textit{HTML5, CSS3, JS, Web Platform} \hfill \href{https://github.com/jxliian/repasaYA}{github.com/jxliian/repasaYA}
+\begin{itemize}
+    \item Architected a collaborative study platform providing structured university lecture notes, interactive flashcards, and exam practice modules for university students.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{Agent-Based Modeling (ABM) Economic \& Social Simulation} \ $\cdot$ \ \textit{Python, Data Science} \hfill \href{https://github.com/jxliian/ABM-Income-Interpersonal-Relations-Impact-on-Happiness}{github.com/jxliian/ABM-...}
+\begin{itemize}
+    \item Developed a computational agent-based simulation analyzing how income inequality dynamics and interpersonal social network density impact collective happiness metrics.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{Markdown to HTML Lexical Compiler Parser} \ $\cdot$ \ \textit{C/C++, Flex/Lex} \hfill \href{https://github.com/jxliian/markdown-to-html-lex}{github.com/jxliian/markdown-to-html-lex}
+\begin{itemize}
+    \item Constructed a lexical scanner and syntax parser in C++ using Lex/Flex to translate Markdown syntax rules into clean, validated HTML documents.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{SSDBot} \ $\cdot$ \ \textit{Python, Discord API, Automation} \hfill \href{https://github.com/jxliian/SSDBot}{github.com/jxliian/SSDBot}
+\begin{itemize}
+    \item Engineered a modular Discord bot for community management, API integration, and event automation.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{AutoQuickTest} \ $\cdot$ \ \textit{Python, Bash, Testing Suite} \hfill \href{https://github.com/jxliian/AutoQuickTest}{github.com/jxliian/AutoQuickTest}
+\begin{itemize}
+    \item Built an automated CLI testing utility to compile, execute, and validate code output against expected test cases.
+\end{itemize}
+
+\vspace{2pt}
+
+\textbf{Irrgarten Game Engine} \ $\cdot$ \ \textit{Java, Ruby, OOP Design Patterns} \hfill \href{https://github.com/jxliian/Irrgarten-jxliian}{github.com/jxliian/Irrgarten-jxliian}
+\begin{itemize}
+    \item Programmed an object-oriented maze game engine implementing inheritance hierarchies, state machines, and OOP design patterns across Java and Ruby.
+\end{itemize}
+
+% Leadership & Availability
+\section{Leadership \& Soft Skills}
+\begin{itemize}
+    \item \textbf{Soft Skills:} Team Leadership, Clear Technical Communication, Problem Solving, Adaptability, High Work Ethic.
+    \item \textbf{Availability:} Immediate availability for internships, part-time, and tech roles.
+\end{itemize}
+
+\end{document}

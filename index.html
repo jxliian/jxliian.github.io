@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Julian Carrión - Estudiante de Ingeniería Informática y Administración de Empresas en la Universidad de Granada. Portafolio de proyectos y habilidades.">
+  <meta name="author" content="Julian Carrión">
+  <title>Julian Carrión · Ingeniería Informática & ADE</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <!-- Background Matrix Rain Canvas -->
+  <canvas id="matrix-canvas"></canvas>
+
+  <!-- Floating Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <a href="#" class="nav-brand">
+        <span class="nav-brand-dot"></span>
+        <span>Julian Carrión</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#about" class="nav-link" data-i18n="navAbout">Sobre mí</a></li>
+        <li><a href="#projects" class="nav-link" data-i18n="navProjects">Proyectos</a></li>
+        <li><a href="#skills" class="nav-link" data-i18n="navSkills">Habilidades</a></li>
+        <li><a href="#resumes" class="nav-link" data-i18n="navResumes">Curriculum</a></li>
+        <li><a href="#contact" class="nav-link" data-i18n="navContact">Contacto</a></li>
+      </ul>
+
+      <div class="nav-right-controls">
+        <button id="lang-toggle-btn" class="toggle-btn" title="Cambiar Idioma / Switch Language">🌐 ES</button>
+        <button id="theme-toggle-btn" class="toggle-btn" title="Cambiar Tema / Switch Theme">🌙 Dark</button>
+        <a href="#contact" class="nav-cta" data-i18n="navCta">Contactar</a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section" id="hero">
+    <div class="container">
+      <div class="hero-grid">
+
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="hero-badge-pulse"></span>
+            <span data-i18n="heroBadge">Estudiante de Doble Grado Informática + ADE @ UGR</span>
+          </div>
+
+          <h1 class="hero-title" data-i18n="heroTitle">
+            Ingeniería Informática y Administración de Empresas
+          </h1>
+
+          <p class="hero-tagline" data-i18n="heroTagline">Always learning</p>
+
+          <p class="hero-bio" data-i18n="heroBio">
+            Soy <strong>Julian Carrión</strong> (jxliian), estudiante de 21 años del doble grado en Ingeniería
+            Informática y Administración de Empresas en la Universidad de Granada. Apasionado por la ingeniería de
+            software, la programación de sistemas y el análisis de datos.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn-primary">
+              <span data-i18n="btnViewProjects">Ver Proyectos</span>
+            </a>
+            <button class="btn-secondary js-copy-email">
+              <span data-i18n="btnCopyEmail">Copiar Email</span>
+            </button>
+          </div>
+
+          <!-- Hero Key Stats -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">21</span>
+              <span class="stat-label" data-i18n="statAgeLabel">Años de Edad</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="statDegree">Doble Grado</span>
+              <span class="stat-label" data-i18n="statDegreeLabel">Informática + ADE</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="statLocation">Granada</span>
+              <span class="stat-label" data-i18n="statLocationLabel">Ubicación, España</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Avatar Portrait (Bigger Image) -->
+        <div class="hero-avatar-container">
+          <div class="hero-avatar-glow"></div>
+          <div class="hero-avatar-card">
+            <img src="imgs/Gemini_Generated_Image_.png" alt="Julian Carrión Avatar" class="hero-avatar-img">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About Me Section (Centered Photo Layout) -->
+  <section class="section" id="about">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="aboutSubtitle">Trayectoria y Visión</span>
+        <h2 class="section-title" data-i18n="aboutTitle">Sobre mí</h2>
+        <p class="section-description" data-i18n="aboutDesc">Combinando la capacidad analítica del desarrollo con la
+          visión estratégica de negocio.</p>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Centered Photo Container -->
+        <div class="about-photo-container">
+          <div class="about-photo-wrapper">
+            <img src="imgs/PXL_20260720_080953084.NIGHT (1).jpg" alt="Julian Carrión" class="about-photo-img">
+            <div class="about-photo-badge">
+              <div data-i18n="aboutBadgeText">
+                <strong>Julian Carrión</strong> · Universidad de Granada
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detailed Bio Card -->
+        <div class="about-content-card">
+          <p class="about-paragraph" data-i18n="aboutP1">
+            Tengo 21 años y estudio el doble grado de <strong>Ingeniería Informática y Administración y Dirección de
+              Empresas</strong> en la Universidad de Granada. Me apasiona construir software que resuelva problemas
+            reales, desde la programación de sistemas hasta aplicaciones web y herramientas de automatización.
+          </p>
+          <p class="about-paragraph" data-i18n="aboutP2">
+            Mi experiencia abarca múltiples paradigmas de programación, y estoy constantemente ampliando mis habilidades
+            en el punto de encuentro entre la tecnología y la estrategia empresarial.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-title">
+                <span data-i18n="highlight1Title">Desarrollador Versátil</span>
+              </div>
+              <p class="highlight-desc" data-i18n="highlight1Desc">Desde gestión de memoria en C & C++ hasta
+                simulaciones en Python y plataformas web modernas.</p>
+            </div>
+
+            <div class="highlight-item">
+              <div class="highlight-title">
+                <span data-i18n="highlight2Title">Tecnología & Negocios</span>
+              </div>
+              <p class="highlight-desc" data-i18n="highlight2Desc">Conectando la eficiencia algorítmica con la visión
+                estratégica de mercado y producto.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Projects Showcase Section (6 Specific User Repos) -->
+  <section class="section" id="projects">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="projectsSubtitle">Proyectos Destacados</span>
+        <h2 class="section-title" data-i18n="projectsTitle">Proyectos</h2>
+        <p class="section-description" data-i18n="projectsDesc">Proyectos clave en desarrollo web, análisis
+          léxico/compiladores, simulaciones, herramientas de test y motores OOP.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- Project 1: repasaYA -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/repasaYA" target="_blank" class="project-link-icon"
+                  title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project1Title">repasaYA</h3>
+            <p class="project-description" data-i18n="project1Desc">
+              Plataforma colaborativa donde comparto apuntes universitarios estructurados, tarjetas de estudio
+              (flashcards) y preguntas de práctica para la comunidad estudiantil.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">HTML5 / CSS3</span>
+            <span class="project-tag">Study Platform</span>
+            <span class="project-tag">Community</span>
+          </div>
+        </article>
+
+        <!-- Project 2: ABM Simulation -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/ABM-Income-Interpersonal-Relations-Impact-on-Happiness"
+                  target="_blank" class="project-link-icon" title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project2Title">Simulación ABM Ingresos & Felicidad</h3>
+            <p class="project-description" data-i18n="project2Desc">
+              Simulación computacional mediante Modelado Basado en Agentes (ABM) que analiza cómo la dinámica de
+              ingresos y las relaciones interpersonales impactan en la felicidad.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Agent-Based Modeling</span>
+            <span class="project-tag">Data Analysis</span>
+          </div>
+        </article>
+
+        <!-- Project 3: markdown-to-html-lex -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/markdown-to-html-lex" target="_blank" class="project-link-icon"
+                  title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project3Title">Parser Markdown a HTML (Lex)</h3>
+            <p class="project-description" data-i18n="project3Desc">
+              Herramienta de análisis léxico creada en Lex/Flex y C/C++ para parsear sintaxis Markdown y generar código
+              HTML estructurado.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">C / C++</span>
+            <span class="project-tag">Flex / Lex</span>
+            <span class="project-tag">Compiladores</span>
+          </div>
+        </article>
+
+        <!-- Project 4: SSDBot -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/SSDBot" target="_blank" class="project-link-icon"
+                  title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project4Title">SSDBot</h3>
+            <p class="project-description" data-i18n="project4Desc">
+              Bot de Discord modular y personalizable diseñado para la gestión de comunidades, integración de APIs y
+              automatización de eventos.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python</span>
+            <span class="project-tag">Discord API</span>
+            <span class="project-tag">Automation</span>
+          </div>
+        </article>
+
+        <!-- Project 5: AutoQuickTest -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/AutoQuickTest" target="_blank" class="project-link-icon"
+                  title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project5Title">AutoQuickTest</h3>
+            <p class="project-description" data-i18n="project5Desc">
+              Herramienta de automatización de pruebas para compilar, ejecutar y validar conjuntos de test frente a
+              salidas esperadas.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Python / Bash</span>
+            <span class="project-tag">Testing Automation</span>
+            <span class="project-tag">CLI Tool</span>
+          </div>
+        </article>
+
+        <!-- Project 6: Irrgarten -->
+        <article class="project-card">
+          <div>
+            <div class="project-top">
+              <div class="project-links">
+                <a href="https://github.com/jxliian/Irrgarten-jxliian" target="_blank" class="project-link-icon"
+                  title="Ver repositorio en GitHub">
+                  <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                    <path
+                      d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z">
+                    </path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title" data-i18n="project6Title">Motor de Juego Irrgarten</h3>
+            <p class="project-description" data-i18n="project6Desc">
+              Motor de juego orientado a objetos implementado en Java y Ruby aplicando principios POO, herencia y
+              máquinas de estados.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="project-tag">Java</span>
+            <span class="project-tag">Ruby</span>
+            <span class="project-tag">OOP Design</span>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Focused Skills & Technical Toolkit Section -->
+  <section class="section" id="skills">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="skillsSubtitle">Toolkit Esencial</span>
+        <h2 class="section-title" data-i18n="skillsTitle">Habilidades y Tecnologías Clave</h2>
+        <p class="section-description" data-i18n="skillsDesc">Lenguajes, sistemas y herramientas de uso diario en el
+          desarrollo de software profesional.</p>
+      </div>
+
+      <div class="skills-container">
+
+        <!-- Category 1: Core Languages -->
+        <div class="skill-category">
+          <h3 class="skill-category-title" data-i18n="catCoreLanguages"><span>Lenguajes</span> Principales</h3>
+          <div class="skills-grid-focused">
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">Python</span>
+                <span class="skill-item-level">Data & Automation</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">C++</span>
+                <span class="skill-item-level">Systems & Algorithmic</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">Java</span>
+                <span class="skill-item-level">OOP Architecture</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">JavaScript</span>
+                <span class="skill-item-level">Web Applications</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">SQL</span>
+                <span class="skill-item-level">Relational Databases</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">C</span>
+                <span class="skill-item-level">Low-Level Memory</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Tools & DevOps -->
+        <div class="skill-category">
+          <h3 class="skill-category-title" data-i18n="catToolsSystems"><span>Herramientas</span>, DevOps y Sistemas</h3>
+          <div class="skills-grid-focused">
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">Git & GitHub</span>
+                <span class="skill-item-level">Version Control</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">Docker</span>
+                <span class="skill-item-level">Containerization</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">Linux / Bash</span>
+                <span class="skill-item-level">Shell & Environment</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <div class="skill-item-info">
+                <span class="skill-item-name">HTML5 / CSS3</span>
+                <span class="skill-item-level">Modern Web Standards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Resumes / CV Downloads Section -->
+  <section class="section" id="resumes">
+    <div class="container">
+
+      <div class="section-header">
+        <span class="section-subtitle" data-i18n="cvSubtitle">Curriculum Vitae</span>
+        <h2 class="section-title" data-i18n="cvTitle">Descargar mi CV</h2>
+        <p class="section-description" data-i18n="cvDesc">Dos versiones adaptadas y actualizadas según el perfil
+          profesional y tipo de vacante.</p>
+      </div>
+
+      <div class="cv-grid">
+
+        <!-- CV Version 1: Tech ATS Resume -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <div>
+              <span class="cv-badge" data-i18n="cvTechBadge">LaTeX · English · ATS-Friendly</span>
+              <h3 class="cv-card-title" data-i18n="cvTechTitle">Tech / Software Engineer Resume</h3>
+            </div>
+          </div>
+          <p class="cv-card-desc" data-i18n="cvTechDesc">
+            Formato estándar internacional optimizado para filtros ATS y empresas tecnológicas. Redactado en inglés,
+            centrado en ingeniería de software, arquitectura de sistemas y análisis de datos. Sin fotografías.
+          </p>
+          <div class="cv-card-actions">
+            <a href="cv/julian_carrion_tech_resume.pdf" target="_blank" class="btn-primary">
+              <span data-i18n="btnDownload">Descargar</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CV Version 2: Casual Student CV -->
+        <div class="cv-card">
+          <div class="cv-card-header">
+            <div>
+              <span class="cv-badge cv-badge-casual" data-i18n="cvCasualBadge">Visual · Español · Con Fotografía</span>
+              <h3 class="cv-card-title" data-i18n="cvCasualTitle">CV Estudiante / Trabajos de Verano</h3>
+            </div>
+          </div>
+          <p class="cv-card-desc" data-i18n="cvCasualDesc">
+            Diseño moderno y visual con fotografía personal. Encaminado a puestos de atención al público (inglés C1),
+            hostelería, comercio, prácticas y ofertas para estudiantes de verano.
+          </p>
+          <div class="cv-card-actions">
+            <a href="cv/julian_carrion_estudiante_casual.pdf" target="_blank" class="btn-primary btn-casual">
+              <span data-i18n="btnDownload">Descargar</span>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact Section (Form + Email Copy Button) -->
+  <section class="section" id="contact">
+    <div class="container contact-wrapper">
+      <div class="contact-card">
+        <h2 class="contact-title" data-i18n="contactTitle">Contacto</h2>
+        <p class="contact-text" data-i18n="contactText">
+          Puedes enviarme un mensaje directamente usando el formulario o copiar mi email:
+        </p>
+
+        <!-- Form -->
+        <form id="portfolio-contact-form" class="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="contact-name" class="form-label" data-i18n="labelName">Tu Nombre</label>
+              <input type="text" id="contact-name" class="form-input" placeholder="Tu nombre..."
+                data-i18n-placeholder="placeholderName" required>
+            </div>
+            <div class="form-group">
+              <label for="contact-email" class="form-label" data-i18n="labelEmail">Tu Email</label>
+              <input type="email" id="contact-email" class="form-input" placeholder="tu@email.com"
+                data-i18n-placeholder="placeholderEmail" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="contact-subject" class="form-label" data-i18n="labelSubject">Asunto</label>
+            <input type="text" id="contact-subject" class="form-input" placeholder="Asunto..."
+              data-i18n-placeholder="placeholderSubject" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message" class="form-label" data-i18n="labelMessage">Mensaje</label>
+            <textarea id="contact-message" class="form-textarea" placeholder="Escribe tu mensaje aquí..."
+              data-i18n-placeholder="placeholderMessage" required></textarea>
+          </div>
+
+          <div class="contact-actions">
+            <button type="submit" class="contact-submit-btn">
+              <span data-i18n="btnSendMessage">Enviar Mensaje</span>
+            </button>
+
+            <button type="button" class="btn-secondary js-copy-email">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                <path
+                  d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z">
+                </path>
+                <path
+                  d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z">
+                </path>
+              </svg>
+              <span data-i18n="btnCopyEmail">Copiar Email</span>
+            </button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Clean Footer (Removed Antigravity reference) -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <p data-i18n="footerText">© 2026 Julian Carrión (jxliian)</p>
+      <div class="footer-socials">
+        <a href="https://github.com/jxliian" target="_blank" class="footer-social-link">GitHub</a>
+        <a href="mailto:carrionjuliann@gmail.com" class="footer-social-link">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Main JavaScript Logic -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>

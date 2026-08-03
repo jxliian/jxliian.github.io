@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Julián Carrión Tovar - CV Estudiante</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    html, body {
+      width: 210mm;
+      height: 297mm;
+      overflow: hidden;
+      font-family: 'Open Sans', sans-serif;
+      background: #ffffff;
+      color: #2b2b2b;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    body {
+      padding: 36px 36px;
+      display: flex;
+      gap: 32px;
+    }
+
+    /* Left Column Container */
+    .left-column {
+      width: 33%;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding-top: 35px; /* space for overlapping photo top */
+    }
+
+    /* Outer Framed Box for Left Content - Photo Fused at Top */
+    .left-box {
+      border: 3px solid #1a2a5e;
+      padding: 145px 16px 24px 16px; /* balanced top and bottom padding */
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      background: #ffffff;
+      position: relative;
+    }
+
+    /* Photo Fused / Overlapping Top of Box */
+    .photo-container {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      text-align: center;
+    }
+    .profile-photo {
+      width: 145px;
+      height: 165px;
+      object-fit: cover;
+      object-position: center 15%;
+      border: 4px solid #1a2a5e;
+      border-radius: 0;
+      background: #ffffff;
+    }
+
+    /* Solid Navy Section Badges */
+    .badge-heading {
+      font-family: 'Montserrat', sans-serif;
+      background: #1a2a5e;
+      color: #ffffff;
+      padding: 5px 10px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    .left-text {
+      font-size: 0.80rem;
+      line-height: 1.5;
+      color: #3f3f3f;
+    }
+
+    .left-list {
+      list-style: none;
+      font-size: 0.80rem;
+      line-height: 1.6;
+      color: #3f3f3f;
+    }
+    .left-list li {
+      margin-bottom: 6px;
+    }
+    .left-list strong {
+      color: #1a2a5e;
+    }
+
+    .bullet-left {
+      list-style-type: square;
+      padding-left: 14px;
+      font-size: 0.79rem;
+      color: #3f3f3f;
+      line-height: 1.55;
+    }
+    .bullet-left li {
+      margin-bottom: 4px;
+    }
+
+    /* Progress bars for languages */
+    .lang-item {
+      margin-bottom: 8px;
+    }
+    .lang-label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #1a2a5e;
+      margin-bottom: 3px;
+    }
+    .lang-bar-bg {
+      height: 6px;
+      background: #e2e8f0;
+      width: 100%;
+    }
+    .lang-bar-fill {
+      height: 100%;
+      background: #1a2a5e;
+    }
+
+    /* Right Main Column */
+    .right-column {
+      width: 67%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Header Banner */
+    .header-banner {
+      margin-bottom: 20px;
+    }
+    .name {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.3rem;
+      font-weight: 900;
+      color: #1a2a5e;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      line-height: 1.1;
+    }
+    .tagline {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: #555555;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .header-line {
+      height: 3.5px;
+      background: #1a2a5e;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    /* Right Section Styling */
+    .right-section {
+      margin-bottom: 18px;
+    }
+    .right-badge-heading {
+      font-family: 'Montserrat', sans-serif;
+      background: #1a2a5e;
+      color: #ffffff;
+      padding: 6px 14px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .item-card {
+      margin-bottom: 14px;
+    }
+    .item-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 3px;
+    }
+    .item-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: #1a2a5e;
+      text-transform: uppercase;
+    }
+    .item-date {
+      font-size: 0.80rem;
+      font-weight: 700;
+      color: #555555;
+      white-space: nowrap;
+    }
+    .item-subtitle {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: #4b5563;
+      margin-bottom: 5px;
+    }
+
+    .bullet-right {
+      list-style-type: square;
+      padding-left: 16px;
+      font-size: 0.81rem;
+      color: #333333;
+      line-height: 1.55;
+    }
+    .bullet-right li {
+      margin-bottom: 4px;
+    }
+
+    /* Honors Callout Box */
+    .honors-box {
+      border: 1.5px solid #1a2a5e;
+      background: #f8fafc;
+      padding: 8px 12px;
+      margin: 6px 0 8px 0;
+      font-size: 0.80rem;
+      color: #1a2a5e;
+      line-height: 1.5;
+    }
+    .honors-title {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 0.77rem;
+      margin-bottom: 4px;
+      color: #1a2a5e;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Left Column -->
+  <aside class="left-column">
+    
+    <!-- Outer Framed Box for Left Content -->
+    <div class="left-box">
+
+      <!-- Photo Fused & Overlapping Top of Box -->
+      <div class="photo-container">
+        <img src="../imgs/cv.jpeg" alt="Julián Carrión Tovar" class="profile-photo">
+      </div>
+      
+      <!-- Sobre Mí -->
+      <div>
+        <div class="badge-heading">Sobre Mí</div>
+        <p class="left-text">
+          Estudiante de 21 años del doble grado en <strong>Ingeniería Informática y ADE</strong> en la Universidad de Granada. Responsable, proactivo y con fuerte vocación de servicio al público en hostelería, comercio y gestión.
+        </p>
+      </div>
+
+      <!-- Contacto -->
+      <div>
+        <div class="badge-heading">Contacto</div>
+        <ul class="left-list">
+          <li><strong>Teléfono:</strong> +34 644 955 482</li>
+          <li><strong>Email:</strong> carrionjuliann@gmail.com</li>
+          <li><strong>Web:</strong> jxliian.github.io</li>
+          <li><strong>Ubicación:</strong> Motril / Granada</li>
+        </ul>
+      </div>
+
+      <!-- Aptitudes Clave -->
+      <div>
+        <div class="badge-heading">Aptitudes</div>
+        <ul class="bullet-left">
+          <li>Atención al Cliente</li>
+          <li>Trabajo en Equipo y Empatía</li>
+          <li>Organización y Control de Caja</li>
+          <li>Aprendizaje Rápido</li>
+          <li>Proactividad y Puntualidad</li>
+        </ul>
+      </div>
+
+      <!-- Idiomas -->
+      <div>
+        <div class="badge-heading">Idiomas</div>
+        <div class="lang-item">
+          <div class="lang-label"><span>Español</span> <span>Nativo (C2)</span></div>
+          <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 100%;"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-label"><span>Inglés</span> <span>C1 Cambridge</span></div>
+          <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 88%;"></div></div>
+        </div>
+        <div class="lang-item">
+          <div class="lang-label"><span>Francés</span> <span>Básico (A2)</span></div>
+          <div class="lang-bar-bg"><div class="lang-bar-fill" style="width: 35%;"></div></div>
+        </div>
+      </div>
+
+      <!-- Disponibilidad -->
+      <div>
+        <div class="badge-heading">Disponibilidad</div>
+        <p class="left-text">
+          <strong>Incorporación Inmediata</strong><br>
+          Jornada Completa / Parcial<br>
+          Verano y Festivos
+        </p>
+      </div>
+
+    </div>
+  </aside>
+
+  <!-- Right Main Column -->
+  <main class="right-column">
+    
+    <div>
+      <!-- Header Banner -->
+      <header class="header-banner">
+        <h1 class="name">Julián Carrión</h1>
+        <div class="tagline">Estudiante Universitario · Doble Grado Informática y ADE</div>
+        <div class="header-line"></div>
+      </header>
+
+      <!-- Formación Académica -->
+      <section class="right-section">
+        <div class="right-badge-heading">Formación Académica</div>
+        
+        <div class="item-card">
+          <div class="item-title-row">
+            <span class="item-title">Doble Grado en Ingeniería Informática y ADE</span>
+            <span class="item-date">2022 – Presente</span>
+          </div>
+          <div class="item-subtitle">Universidad de Granada (ETSIIT & Facultad de CC. Económicas)</div>
+          
+          <!-- Matrículas de Honor Callout Box -->
+          <div class="honors-box">
+            <div class="honors-title">Matrículas de Honor Destacadas (UGR):</div>
+            • <strong>Técnicas Cuantitativas</strong> (Estadística, Probabilidad y Análisis): <strong>9,8 / 10 (Matrícula de Honor)</strong><br>
+            • <strong>Diseño de Interfaces de Usuario</strong> (UI/UX & Web): <strong>9,4 / 10 (Matrícula de Honor)</strong>
+          </div>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title-row">
+            <span class="item-title">Bachillerato de Ciencias Sociales & Selectividad (EBAU)</span>
+            <span class="item-date">2020 – 2022</span>
+          </div>
+          <div class="item-subtitle">I.E.S. José Martín Recuerda, Motril (Granada)</div>
+          <ul class="bullet-right">
+            <li><strong>Nota Media de Bachillerato:</strong> 9,9 / 10 (Premio Extraordinario / Matrícula de Honor).</li>
+            <li><strong>Nota de Acceso a la Universidad (EBAU):</strong> <strong>13,005 / 14,000</strong> (Top 1% de excelencia).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Competencias y Experiencia -->
+      <section class="right-section">
+        <div class="right-badge-heading">Competencias y Experiencia</div>
+        
+        <div class="item-card">
+          <div class="item-title-row">
+            <span class="item-title">Atención al Cliente e Idiomas</span>
+          </div>
+          <ul class="bullet-right">
+            <li>Fluidez total en inglés (<strong>Certificado Cambridge C1</strong>) para atención a clientes nacionales e internacionales sin barreras lingüísticas.</li>
+            <li>Don de gentes, escucha activa, empatía y resolución eficaz de incidencias.</li>
+          </ul>
+        </div>
+
+        <div class="item-card">
+          <div class="item-title-row">
+            <span class="item-title">Gestión, Organización y Trabajo en Equipo</span>
+          </div>
+          <ul class="bullet-right">
+            <li>Habilidad en organización de tareas, control de caja, inventario y coordinación gracias a la formación en administración de empresas.</li>
+            <li>Adaptación inmediata a ritmos exigentes de trabajo (temporadas de verano, hostelería y eventos).</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Proyectos e Iniciativas -->
+      <section class="right-section" style="margin-bottom: 0;">
+        <div class="right-badge-heading">Proyectos e Iniciativas</div>
+        <div class="item-card">
+          <div class="item-title-row">
+            <span class="item-title">Creador y Desarrollador de repasaYA</span>
+            <span class="item-date">2024</span>
+          </div>
+          <ul class="bullet-right">
+            <li>Plataforma web colaborativa para la estructuración e intercambio de apuntes universitarios y recursos académicos.</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+</body>
+</html>
