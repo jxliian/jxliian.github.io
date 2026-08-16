@@ -1,12 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.20)  3 AUG 2026 02:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2024.9.20)  16 AUG 2026 18:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_
-resume.tex
-
-(/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_r
-esume.tex
+**julian_carrion_tech_resume.tex
+(./julian_carrion_tech_resume.tex
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
@@ -282,8 +279,7 @@ File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box53
 )
-(/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_r
-esume.aux)
+(./julian_carrion_tech_resume.aux)
 \openout1 = `julian_carrion_tech_resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
@@ -340,15 +336,12 @@ LaTeX Font Info:    ... okay on input line 33.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 Package hyperref Info: Link coloring ON on input line 33.
-
-(/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_r
-esume.out)
-(/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_r
-esume.out)
+(./julian_carrion_tech_resume.out) (./julian_carrion_tech_resume.out)
 \@outlinefile=\write3
 \openout3 = `julian_carrion_tech_resume.out'.
 
- (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+
+(/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count279
 \scratchdimen=\dimen159
@@ -399,9 +392,7 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texmf/fonts/enc/
 dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/sha
-re/texmf/fonts/enc/dvips/lm/lm-ts1.enc}]
-(/home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/julian_carrion_tech_r
-esume.aux)
+re/texmf/fonts/enc/dvips/lm/lm-ts1.enc}] (./julian_carrion_tech_resume.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -411,23 +402,22 @@ ged.
 (rerunfilecheck)             Checksum: 65F6F55526CFDAB7C88B87C0E780C88C;880.
  ) 
 Here is how much of TeX's memory you used:
- 9722 strings out of 474222
- 151601 string characters out of 5748733
- 1944975 words of memory out of 5000000
+ 9721 strings out of 474222
+ 150870 string characters out of 5748733
+ 1946975 words of memory out of 5000000
  31861 multiletter control sequences out of 15000+600000
  595608 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 75i,5n,79p,558b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 75i,5n,79p,501b,432s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
 pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></us
 r/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/publ
 ic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share
 /texmf/fonts/type1/public/lm/lmsy9.pfb>
-Output written on /home/jxlig0d/Escritorio/portafolio/jxliian.github.io/cv/juli
-an_carrion_tech_resume.pdf (1 page, 158728 bytes).
+Output written on julian_carrion_tech_resume.pdf (1 page, 160645 bytes).
 PDF statistics:
- 87 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 69 compressed objects within 1 object stream
  7 named destinations out of 1000 (max. 500000)
  41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

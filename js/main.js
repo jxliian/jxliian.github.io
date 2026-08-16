@@ -40,9 +40,11 @@ const translations = {
     
     projectsSubtitle: "Portfolio Highlights",
     projectsTitle: "Featured Projects",
-    projectsDesc: "Key projects spanning web platforms, compiler parsers, simulations, testing tools, and OOP game engines.",
+    projectsDesc: "Key projects spanning high-performance mobile apps, web platforms, compiler parsers, simulations, testing tools, and OOP game engines.",
     
-    // 6 Projects
+    projectFitTrackerTitle: "FitTracker",
+    projectFitTrackerDesc: "High-performance, local-first mobile application engineered for resistance training tracking, progressive overload automation, and strength analytics. Built with React Native (SDK 54), TypeScript, and embedded SQLite.",
+    
     project1Title: "repasaYA",
     project1Desc: "A collaborative platform where I share structured university notes, interactive flashcards, and exam practice questions to support the academic student community.",
     
@@ -133,9 +135,11 @@ const translations = {
     
     projectsSubtitle: "Proyectos Destacados",
     projectsTitle: "Proyectos Destacados",
-    projectsDesc: "Proyectos clave en desarrollo web, análisis léxico/compiladores, simulaciones, herramientas de test y motores OOP.",
+    projectsDesc: "Proyectos clave en aplicaciones móviles de alto rendimiento, desarrollo web, compiladores, simulaciones, herramientas de test y motores OOP.",
     
-    // 6 Projects
+    projectFitTrackerTitle: "FitTracker",
+    projectFitTrackerDesc: "Aplicación móvil local-first de alto rendimiento para el seguimiento de entrenamiento de fuerza, automatización de sobrecarga progresiva y analíticas con React Native (SDK 54), TypeScript y SQLite embebido.",
+    
     project1Title: "repasaYA",
     project1Desc: "Plataforma colaborativa donde comparto apuntes universitarios estructurados, tarjetas de estudio (flashcards) y preguntas de práctica para la comunidad estudiantil.",
     
