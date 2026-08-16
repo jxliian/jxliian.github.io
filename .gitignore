@@ -1,0 +1,28 @@
+# LaTeX auxiliary build files
+*.aux
+*.log
+*.out
+*.toc
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.bbl
+*.blg
+*.brf
+*.idx
+*.ilg
+*.ind
+*.lof
+*.lot
+
+# System & OS metadata
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Node & temporary environment files
+node_modules/
+*.tmp
+*.bak
+.env
