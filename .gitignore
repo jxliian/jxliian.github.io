@@ -21,6 +21,9 @@ Thumbs.db
 .idea/
 .vscode/
 
+# Private / Personal image assets
+imgs/cv.jpeg
+
 # Node & temporary environment files
 node_modules/
 *.tmp
