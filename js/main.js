@@ -203,11 +203,13 @@ const translations = {
 
 // Current State variables
 let currentLang = localStorage.getItem('portfolio_lang') || 'es';
-let currentTheme = localStorage.getItem('portfolio_theme') || 'dark';
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Ensure any old local storage theme preference is cleared
+  localStorage.removeItem('portfolio_theme');
+  document.documentElement.setAttribute('data-theme', 'light');
+
   initPreloader();
-  initTheme();
   initLanguage();
   initCopyEmail();
   initSmoothScroll();
@@ -221,31 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initCardReveal();
   initMobileMenu();
 });
-
-/**
- * Initialize and toggle Theme (Dark / Light)
- */
-function initTheme() {
-  document.documentElement.setAttribute('data-theme', currentTheme);
-  updateThemeButton();
-
-  const themeBtn = document.getElementById('theme-toggle-btn');
-  if (themeBtn) {
-    themeBtn.addEventListener('click', () => {
-      currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', currentTheme);
-      localStorage.setItem('portfolio_theme', currentTheme);
-      updateThemeButton();
-    });
-  }
-}
-
-function updateThemeButton() {
-  const themeBtn = document.getElementById('theme-toggle-btn');
-  if (themeBtn) {
-    themeBtn.innerHTML = currentTheme === 'dark' ? 'Dark' : 'Light';
-  }
-}
 
 /**
  * Initialize and toggle Language (English / Spanish)
@@ -520,9 +497,8 @@ function initInteractiveParticles() {
 
   function frame() {
     t++;
-    const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-    const pal = theme === 'dark' ? PALETTE_DARK : PALETTE_LIGHT;
-    const baseA = theme === 'dark' ? 0.85 : 0.65;
+    const pal = PALETTE_LIGHT;
+    const baseA = 0.65;
 
     // Soft, subtle parallax follow coefficient (0.35) so cloud doesn't jump exaggeratingly
     const targetCenterX = mouse.active ? (W / 2 + (mouse.x - W / 2) * 0.35) : W / 2;
