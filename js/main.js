@@ -11,65 +11,65 @@ const translations = {
     navResumes: "Resumes",
     navContact: "Contact",
     navCta: "Get in touch",
-    
+
     heroBadge: "CS & Business Admin Student @ UGR",
-    heroTitle: "Computer Science & Business Administration",
+    heroTitle: "The exact software your business needs",
     heroTagline: "Always learning",
     heroBio: "I'm <strong>Julian Carrión</strong> (jxliian), a 21-year-old double-degree student in Computer Science and Business Administration at the University of Granada. Passionate about software engineering, systems programming, and data analysis.",
     btnViewProjects: "View Projects",
     btnCopyEmail: "Copy Email",
     btnEmailCopied: "✓ Email Copied!",
-    
+
     statAgeLabel: "Years Old",
     statDegree: "Double Degree",
     statDegreeLabel: "CS + Business",
     statLocation: "Granada",
     statLocationLabel: "Location, Spain",
-    
+
     aboutSubtitle: "Background & Vision",
     aboutTitle: "About Me",
     aboutDesc: "Combining software engineering capabilities with strategic business thinking.",
     aboutBadgeText: "<strong>Julian Carrión</strong> · University of Granada",
     aboutP1: "I'm a 21-year-old double-degree student combining <strong>Computer Science and Business Administration</strong> at the University of Granada. I'm passionate about building software that solves real problems — from low-level systems programming to web applications and automation tools.",
     aboutP2: "My background spans multiple programming paradigms, and I'm constantly expanding my skill set at the intersection of technology and business strategy.",
-    
+
     highlight1Title: "Full-Spectrum Dev",
     highlight1Desc: "From C & C++ memory management to Python simulations & modern web platforms.",
     highlight2Title: "Business & Tech",
     highlight2Desc: "Bridging algorithmic efficiency with strategic market and product vision.",
-    
+
     projectsSubtitle: "Portfolio Highlights",
     projectsTitle: "Featured Projects",
     projectsDesc: "Key projects spanning high-performance mobile apps, web platforms, compiler parsers, simulations, testing tools, and OOP game engines.",
-    
+
     projectFitTrackerTitle: "FitTracker",
     projectFitTrackerDesc: "High-performance, local-first mobile application engineered for resistance training tracking, progressive overload automation, and strength analytics. Built with React Native (SDK 54), TypeScript, and embedded SQLite.",
-    
+
     project1Title: "repasaYA",
     project1Desc: "A collaborative platform where I share structured university notes, interactive flashcards, and exam practice questions to support the academic student community.",
-    
+
     project2Title: "ABM Income & Happiness Simulation",
     project2Desc: "Agent-Based Modeling (ABM) computational simulation analyzing how income distribution dynamics and interpersonal relationship networks impact collective happiness.",
-    
+
     project3Title: "Markdown to HTML Lex Parser",
     project3Desc: "Lexical compiler tool built in Lex/Flex and C/C++ to parse Markdown syntax rules and convert them into clean, structured HTML.",
-    
+
     project4Title: "SSDBot",
     project4Desc: "Customizable, modular Discord Bot built for community server management, API integrations, and event automation.",
-    
+
     project5Title: "AutoQuickTest",
     project5Desc: "Automated software testing utility designed to streamline compilation, execution, and validation of test suites against expected outputs.",
-    
+
     project6Title: "Irrgarten Engine",
     project6Desc: "Object-oriented maze game engine implemented in Java and Ruby applying OOP principles, inheritance, and state machines.",
-    
+
     skillsSubtitle: "Core Stack",
     skillsTitle: "Essential Technologies",
     skillsDesc: "Practical languages, systems, and tools I use daily for software development.",
-    
+
     catCoreLanguages: "<span>Core</span> Languages & Paradigms",
     catToolsSystems: "<span>Tools</span> & Systems",
-    
+
     cvSubtitle: "Curriculum Vitae",
     cvTitle: "Download My Resumes",
     cvDesc: "Two tailored versions adapted for specific job profiles and application targets.",
@@ -79,7 +79,9 @@ const translations = {
     cvCasualBadge: "Visual · Spanish · With Photo",
     cvCasualTitle: "Student & Summer Jobs Resume",
     cvCasualDesc: "Modern, visual Canva-style layout featuring profile photograph. Geared towards customer-facing roles, C1 English fluency, summer jobs, internships, and hospitality.",
-    btnDownload: "Download",
+    btnDownload: "Download CV",
+    badgeInDev: "In development",
+    floatingWorkText: "Open to work! Contact me 💼",
 
     contactTitle: "Contact Me",
     contactText: "Feel free to reach out directly using the form below or drop an email!",
@@ -89,16 +91,17 @@ const translations = {
     labelMessage: "Message",
     btnSendMessage: "Send Message",
     btnMessageSent: "✓ Message Sent!",
-    
+
     // Placeholders
     placeholderName: "Your name...",
     placeholderEmail: "your@email.com",
     placeholderSubject: "Subject...",
     placeholderMessage: "Write your message here...",
-    
+
+    preloaderStatus: "Initialising portfolio...",
     footerText: "© 2026 Julian Carrión (jxliian)"
   },
-  
+
   es: {
     navAbout: "Sobre mí",
     navProjects: "Proyectos",
@@ -106,65 +109,65 @@ const translations = {
     navResumes: "Curriculum",
     navContact: "Contacto",
     navCta: "Contactar",
-    
+
     heroBadge: "Estudiante de Doble Grado Informática + ADE @ UGR",
-    heroTitle: "Ingeniería Informática y Administración de Empresas",
+    heroTitle: "El software exacto que tu negocio necesita",
     heroTagline: "Siempre aprendiendo",
     heroBio: "Soy <strong>Julian Carrión</strong> (jxliian), estudiante de 21 años del doble grado en Ingeniería Informática y Administración de Empresas en la Universidad de Granada. Apasionado por la ingeniería de software, la programación de sistemas y el análisis de datos.",
     btnViewProjects: "Ver Proyectos",
     btnCopyEmail: "Copiar Email",
     btnEmailCopied: "✓ ¡Email Copiado!",
-    
+
     statAgeLabel: "Años de Edad",
     statDegree: "Doble Grado",
     statDegreeLabel: "Informática + ADE",
     statLocation: "Granada",
     statLocationLabel: "Ubicación, España",
-    
+
     aboutSubtitle: "Trayectoria y Visión",
     aboutTitle: "Sobre mí",
     aboutDesc: "Combinando la capacidad analítica del desarrollo con la visión estratégica de negocio.",
     aboutBadgeText: "<strong>Julian Carrión</strong> · Universidad de Granada",
     aboutP1: "Tengo 21 años y estudio el doble grado de <strong>Ingeniería Informática y Administración y Dirección de Empresas</strong> en la Universidad de Granada. Me apasiona construir software que resuelva problemas reales, desde la programación de sistemas hasta aplicaciones web y herramientas de automatización.",
     aboutP2: "Mi experiencia abarca múltiples paradigmas de programación, y estoy constantemente ampliando mis habilidades en el punto de encuentro entre la tecnología y la estrategia empresarial.",
-    
+
     highlight1Title: "Desarrollador Versátil",
     highlight1Desc: "Desde gestión de memoria en C & C++ hasta simulaciones en Python y plataformas web modernas.",
     highlight2Title: "Tecnología & Negocios",
     highlight2Desc: "Conectando la eficiencia algorítmica con la visión estratégica de mercado y producto.",
-    
+
     projectsSubtitle: "Proyectos Destacados",
     projectsTitle: "Proyectos Destacados",
     projectsDesc: "Proyectos clave en aplicaciones móviles de alto rendimiento, desarrollo web, compiladores, simulaciones, herramientas de test y motores OOP.",
-    
+
     projectFitTrackerTitle: "FitTracker",
     projectFitTrackerDesc: "Aplicación móvil local-first de alto rendimiento para el seguimiento de entrenamiento de fuerza, automatización de sobrecarga progresiva y analíticas con React Native (SDK 54), TypeScript y SQLite embebido.",
-    
+
     project1Title: "repasaYA",
     project1Desc: "Plataforma colaborativa donde comparto apuntes universitarios estructurados, tarjetas de estudio (flashcards) y preguntas de práctica para la comunidad estudiantil.",
-    
+
     project2Title: "Simulación ABM Ingresos & Felicidad",
     project2Desc: "Simulación computacional mediante Modelado Basado en Agentes (ABM) que analiza cómo la dinámica de ingresos y las relaciones interpersonales impactan en la felicidad.",
-    
+
     project3Title: "Parser Markdown a HTML (Lex)",
     project3Desc: "Herramienta de análisis léxico creada en Lex/Flex y C/C++ para parsear sintaxis Markdown y generar código HTML estructurado.",
-    
+
     project4Title: "SSDBot",
     project4Desc: "Bot de Discord modular y personalizable diseñado para la gestión de comunidades, integración de APIs y automatización de eventos.",
-    
+
     project5Title: "AutoQuickTest",
     project5Desc: "Herramienta de automatización de pruebas para compilar, ejecutar y validar conjuntos de test frente a salidas esperadas.",
-    
+
     project6Title: "Motor de Juego Irrgarten",
     project6Desc: "Motor de juego orientado a objetos implementado en Java y Ruby aplicando principios POO, herencia y máquinas de estados.",
-    
+
     skillsSubtitle: "Toolkit Esencial",
     skillsTitle: "Habilidades y Tecnologías Clave",
     skillsDesc: "Lenguajes, sistemas y herramientas de uso diario en el desarrollo de software profesional.",
-    
+
     catCoreLanguages: "<span>Lenguajes</span> Principales",
     catToolsSystems: "<span>Herramientas</span> y Sistemas",
-    
+
     cvSubtitle: "Curriculum Vitae",
     cvTitle: "Descargar mi CV",
     cvDesc: "Dos versiones adaptadas y actualizadas según el perfil profesional y tipo de vacante.",
@@ -174,7 +177,9 @@ const translations = {
     cvCasualBadge: "Visual · Español · Con Fotografía",
     cvCasualTitle: "CV Estudiante / Trabajos de Verano",
     cvCasualDesc: "Diseño moderno y visual con fotografía personal. Encaminado a puestos de atención al público (inglés C1), hostelería, comercio, prácticas y ofertas para estudiantes de verano.",
-    btnDownload: "Descargar",
+    btnDownload: "Descargar CV",
+    badgeInDev: "En desarrollo",
+    floatingWorkText: "¡Buscando trabajo! Contacta conmigo 💼",
 
     contactTitle: "Contacto",
     contactText: "Puedes enviarme un mensaje directamente usando el formulario o copiar mi email:",
@@ -184,13 +189,14 @@ const translations = {
     labelMessage: "Mensaje",
     btnSendMessage: "Enviar Mensaje",
     btnMessageSent: "✓ ¡Mensaje Enviado!",
-    
+
     // Placeholders
     placeholderName: "Tu nombre...",
     placeholderEmail: "tu@email.com",
     placeholderSubject: "Asunto...",
     placeholderMessage: "Escribe tu mensaje aquí...",
-    
+
+    preloaderStatus: "Cargando portafolio...",
     footerText: "© 2026 Julian Carrión (jxliian)"
   }
 };
@@ -200,12 +206,19 @@ let currentLang = localStorage.getItem('portfolio_lang') || 'es';
 let currentTheme = localStorage.getItem('portfolio_theme') || 'dark';
 
 document.addEventListener('DOMContentLoaded', () => {
+  initPreloader();
   initTheme();
   initLanguage();
   initCopyEmail();
   initSmoothScroll();
   initContactForm();
-  initMatrixRain();
+  initInteractiveParticles();
+  // Typewriter MUST init after language is set, with a small delay
+  // to let the DOM settle after setLanguage writes innerHTML
+  setTimeout(() => {
+    initScrollTypewriter();
+  }, 50);
+  initCardReveal();
   initMobileMenu();
 });
 
@@ -268,6 +281,20 @@ function setLanguage(lang) {
     }
   });
 
+  // Dynamic 3D Inflatable Graphic Title Image (Using English 3D graphic asset for both languages)
+  const hero3dImg = document.querySelector('.js-hero-3d-title-img');
+  if (hero3dImg) {
+    hero3dImg.src = 'imgs/title_3d_bubble_en.png';
+    hero3dImg.alt = translations[lang] && translations[lang]['heroTitle'] ? translations[lang]['heroTitle'] : 'The exact software your business needs';
+  }
+
+  // Reset typewriter elements so they re-animate on next scroll
+  document.querySelectorAll('[data-typewrite]').forEach(el => {
+    delete el.dataset.typewritingDone;
+  });
+  // Re-init typewriter observers after a tick so DOM is settled
+  setTimeout(() => { initScrollTypewriter(); }, 60);
+
   // Update placeholder attributes for form inputs with data-i18n-placeholder
   const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
   placeholders.forEach(el => {
@@ -283,14 +310,14 @@ function setLanguage(lang) {
  */
 function initCopyEmail() {
   const emailButtons = document.querySelectorAll('.js-copy-email');
-  
+
   emailButtons.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
       const email = 'carrionjuliann@gmail.com';
       const isEnglish = currentLang === 'en';
       const copiedMsg = isEnglish ? '✓ Email Copied!' : '✓ ¡Email Copiado!';
-      
+
       try {
         if (navigator.clipboard && window.isSecureContext) {
           await navigator.clipboard.writeText(email);
@@ -307,7 +334,7 @@ function initCopyEmail() {
         const originalHtml = textSpan.innerHTML;
         textSpan.innerHTML = copiedMsg;
         btn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-        
+
         setTimeout(() => {
           textSpan.innerHTML = originalHtml;
           btn.style.background = '';
@@ -332,16 +359,16 @@ function initContactForm() {
     const submitBtn = form.querySelector('.contact-submit-btn');
     const isEnglish = currentLang === 'en';
     const sentText = isEnglish ? '✓ Message Sent!' : '✓ ¡Mensaje Enviado!';
-    
+
     if (submitBtn) {
       const btnSpan = submitBtn.querySelector('span') || submitBtn;
       const originalText = btnSpan.innerHTML;
-      
+
       btnSpan.innerHTML = sentText;
       submitBtn.style.background = 'linear-gradient(135deg, #10b981 0%, #059669 100%)';
-      
+
       form.reset();
-      
+
       setTimeout(() => {
         btnSpan.innerHTML = originalText;
         submitBtn.style.background = '';
@@ -355,12 +382,12 @@ function initContactForm() {
  */
 function initSmoothScroll() {
   const navLinks = document.querySelectorAll('a[href^="#"]');
-  
+
   navLinks.forEach(link => {
     link.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
       if (targetId === '#') return;
-      
+
       const targetElement = document.querySelector(targetId);
       if (targetElement) {
         e.preventDefault();
@@ -374,52 +401,322 @@ function initSmoothScroll() {
 }
 
 /**
- * Background Hacker Matrix Digital Rain Effect
+ * Initial Preloader Screen Handler
  */
-function initMatrixRain() {
-  const canvas = document.getElementById('matrix-canvas');
+function initPreloader() {
+  const preloader = document.getElementById('preloader');
+  if (!preloader) return;
+
+  const hasVisited = sessionStorage.getItem('portfolio_visited');
+
+  if (hasVisited) {
+    preloader.style.display = 'none';
+    document.body.classList.remove('preloader-active');
+  } else {
+    document.body.classList.add('preloader-active');
+
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+      document.body.classList.remove('preloader-active');
+      sessionStorage.setItem('portfolio_visited', 'true');
+
+      setTimeout(() => {
+        preloader.style.display = 'none';
+      }, 650);
+    }, 1300);
+  }
+}
+
+/**
+ * Google Antigravity – Ultra-Fluid Physics & Google Palette
+ * ──────────────────────────────────────────────────────────
+ * Physics: Needle particles have a home position. A soft spring pulls them back,
+ * high liquid damping smooths motion. Cursor repels gracefully (no abrupt snaps).
+ * Palette: Iconic Google quad-colors (Blue, Red, Yellow, Green) blended with Indigo.
+ */
+function initInteractiveParticles() {
+  const canvas = document.getElementById('particle-canvas');
   if (!canvas) return;
-
   const ctx = canvas.getContext('2d');
-  
-  let width = canvas.width = window.innerWidth;
-  let height = canvas.height = window.innerHeight;
 
-  const chars = '0123456789ABCDEF01010101アァカサタナハマヤャラワガザダバパイィキシチニヒミリヰギジヂビピウゥクスツヌフムユュルグズブヅプエェケセテネヘメレヱゲゼデベペオォコソトノホモヨョロヲゴゾドボポヴッン';
-  const fontSize = 14;
-  let columns = Math.floor(width / fontSize);
-  let drops = Array(columns).fill(1);
+  const dpr = window.devicePixelRatio || 1;
+  let W, H;
 
-  window.addEventListener('resize', () => {
-    width = canvas.width = window.innerWidth;
-    height = canvas.height = window.innerHeight;
-    columns = Math.floor(width / fontSize);
-    drops = Array(columns).fill(1);
-  });
+  function resize() {
+    W = window.innerWidth;
+    H = window.innerHeight;
+    canvas.width = W * dpr;
+    canvas.height = H * dpr;
+    canvas.style.width = W + 'px';
+    canvas.style.height = H + 'px';
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+  }
+  resize();
+  window.addEventListener('resize', () => { resize(); createParticles(); });
 
-  function draw() {
+  // Iconic Google Colors (Blue, Red, Yellow, Green) + Indigo accents
+  const PALETTE_DARK = ['#4285F4', '#EA4335', '#FBBC05', '#34A853', '#60a5fa', '#818cf8', '#38bdf8'];
+  const PALETTE_LIGHT = ['#1a73e8', '#d93025', '#f9ab00', '#1e8e3e', '#4f46e5', '#0284c7'];
+
+  const mouse = { x: W / 2, y: H / 2, active: false };
+  window.addEventListener('mousemove', e => { mouse.x = e.clientX; mouse.y = e.clientY; mouse.active = true; });
+  window.addEventListener('mouseleave', () => { mouse.active = false; });
+  window.addEventListener('touchmove', e => {
+    if (e.touches.length) { mouse.x = e.touches[0].clientX; mouse.y = e.touches[0].clientY; mouse.active = true; }
+  }, { passive: true });
+
+  // Ultra-fluid physical tuning (Ultra slow & serene)
+  const R_INNER = 140;   // Repulsion inner core (pushes away)
+  const R_OUTER = 320;   // Attraction outer shell (pulls towards)
+  const SPRING = 0.003; // Ultra-soft spring pull back home
+  const DAMP = 0.955; // Silky liquid damping
+  const WAVE_SPD = 0.0004; // Super slow radial breathing wave
+  const WAVE_AMP = 8;     // Breathing displacement
+
+  const cloudCenter = { x: W / 2, y: H / 2 };
+  const LERP_SPEED = 0.015; // Soft, subtle weightless trailing follow speed
+
+  let particles = [];
+
+  function createParticles() {
+    particles = [];
+    const count = 680; // Spaced out for airy readability
+    const minR = Math.min(W, H) * 0.16; // Clear central hero area
+    const maxR = Math.min(W, H) * 0.68; // Expands to cover ~98% of viewport
+    const cx = cloudCenter.x, cy = cloudCenter.y;
+
+    for (let i = 0; i < count; i++) {
+      // Angle around circle with slight organic jitter
+      const angle = (i / count) * Math.PI * 2 + (Math.random() - 0.5) * 0.14;
+
+      // Multi-harmonic sinusoidal noise for irregular circular cloud
+      const deform = Math.sin(angle * 3) * 45 + Math.cos(angle * 5) * 30 + (Math.random() - 0.5) * 40;
+      const radius = Math.max(minR * 0.8, Math.min(maxR * 1.08, minR + Math.random() * (maxR - minR) + deform));
+
+      // Group Google colors in angular sectors around circle
+      const sectorAngle = (angle + Math.PI * 2) % (Math.PI * 2);
+      const colorIdx = Math.floor((sectorAngle / (Math.PI * 2)) * PALETTE_DARK.length);
+
+      particles.push({
+        baseAngle: angle,
+        baseRadius: radius,
+        orbitSpeed: (i % 2 === 0 ? 1 : -1) * (0.00004 + Math.random() * 0.00004), // Ultra-slow revolving drift
+        hx: cx + Math.cos(angle) * radius,
+        hy: cy + Math.sin(angle) * radius,
+        x: cx + Math.cos(angle) * radius,
+        y: cy + Math.sin(angle) * radius,
+        vx: 0, vy: 0,
+        len: 8 + Math.random() * 12, // Slightly larger needles
+        w: 1.6 + Math.random() * 2.0, // Crisp, punchy strokes
+        ang: angle + Math.PI / 2,
+        ci: colorIdx,
+        ph: Math.random() * Math.PI * 2
+      });
+    }
+  }
+  createParticles();
+
+  let t = 0;
+
+  function frame() {
+    t++;
     const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-    ctx.fillStyle = theme === 'dark' ? 'rgba(0, 0, 0, 0.06)' : 'rgba(255, 255, 255, 0.09)';
-    ctx.fillRect(0, 0, width, height);
+    const pal = theme === 'dark' ? PALETTE_DARK : PALETTE_LIGHT;
+    const baseA = theme === 'dark' ? 0.85 : 0.65;
 
-    ctx.fillStyle = theme === 'dark' ? '#10b981' : '#0f172a';
-    ctx.font = `${fontSize}px JetBrains Mono, monospace`;
+    // Soft, subtle parallax follow coefficient (0.35) so cloud doesn't jump exaggeratingly
+    const targetCenterX = mouse.active ? (W / 2 + (mouse.x - W / 2) * 0.35) : W / 2;
+    const targetCenterY = mouse.active ? (H / 2 + (mouse.y - H / 2) * 0.35) : H / 2;
+    cloudCenter.x += (targetCenterX - cloudCenter.x) * LERP_SPEED;
+    cloudCenter.y += (targetCenterY - cloudCenter.y) * LERP_SPEED;
 
-    for (let i = 0; i < drops.length; i++) {
-      const char = chars[Math.floor(Math.random() * chars.length)];
-      const x = i * fontSize;
-      const y = drops[i] * fontSize;
+    const cx = cloudCenter.x;
+    const cy = cloudCenter.y;
 
-      ctx.fillText(char, x, y);
+    ctx.clearRect(0, 0, W, H);
 
-      if (y > height && Math.random() > 0.975) {
-        drops[i] = 0;
+    for (let i = 0; i < particles.length; i++) {
+      const p = particles[i];
+
+      // 1. Ultra-slow organic revolution
+      p.baseAngle += p.orbitSpeed;
+
+      // 2. Dynamic home orbit position
+      p.hx = cx + Math.cos(p.baseAngle) * p.baseRadius;
+      p.hy = cy + Math.sin(p.baseAngle) * p.baseRadius;
+
+      // 3. Breathing radial wave pulse expanding from cursor
+      const dm = Math.hypot(p.x - mouse.x, p.y - mouse.y);
+      const wp = dm * 0.004 - t * WAVE_SPD * 60 + p.ph;
+      const bo = Math.sin(wp) * WAVE_AMP;
+      const dx0 = dm > 1 ? (p.x - mouse.x) / dm : 0;
+      const dy0 = dm > 1 ? (p.y - mouse.y) / dm : 0;
+
+      // Target position = home orbit + breathing wave
+      const tx = p.hx + dx0 * bo;
+      const ty = p.hy + dy0 * bo;
+
+      // 4. Soft spring acceleration back to home orbit
+      p.vx += (tx - p.x) * SPRING;
+      p.vy += (ty - p.y) * SPRING;
+
+      // 5. Dual Cursor Interaction: Attraction (Outer ring) + Repulsion (Inner core)
+      if (mouse.active && dm < R_OUTER && dm > 2) {
+        const ux = (mouse.x - p.x) / dm;
+        const uy = (mouse.y - p.y) / dm;
+
+        let force = 0;
+        if (dm < R_INNER) {
+          // Inner core: Repulsion (pushes AWAY from cursor)
+          const ratio = 1 - (dm / R_INNER);
+          force = -ratio * ratio * 0.35;
+        } else {
+          // Outer shell: Attraction (pulls TOWARDS cursor)
+          const ratio = Math.sin(((dm - R_INNER) / (R_OUTER - R_INNER)) * Math.PI);
+          force = ratio * 0.15;
+        }
+
+        // Add slow pulsating breathing oscillation
+        const cycle = Math.sin(t * 0.008 + dm * 0.005);
+        force += cycle * 0.04;
+
+        p.vx += ux * force;
+        p.vy += uy * force;
       }
-      drops[i]++;
+
+      // 6. Liquid damping & position integration
+      p.vx *= DAMP;
+      p.vy *= DAMP;
+      p.x += p.vx;
+      p.y += p.vy;
+
+      // 7. Smooth needle orientation
+      const spd = Math.hypot(p.vx, p.vy);
+      if (spd > 0.15) {
+        const ta = Math.atan2(p.vy, p.vx);
+        let d = ta - p.ang;
+        while (d > Math.PI) d -= Math.PI * 2;
+        while (d < -Math.PI) d += Math.PI * 2;
+        p.ang += d * 0.035;
+      } else {
+        // Tangential orientation along circular cloud
+        const ra = Math.atan2(p.y - cy, p.x - cx) + Math.PI / 2;
+        let d = ra - p.ang;
+        while (d > Math.PI) d -= Math.PI * 2;
+        while (d < -Math.PI) d += Math.PI * 2;
+        p.ang += d * 0.015;
+      }
+
+      // 8. Draw needle segment
+      const hl = p.len / 2;
+      const ca = Math.cos(p.ang), sa = Math.sin(p.ang);
+      const x1 = p.x - ca * hl, y1 = p.y - sa * hl;
+      const x2 = p.x + ca * hl, y2 = p.y + sa * hl;
+
+      // Center fade for hero readability
+      const dc = Math.hypot(p.x - cx, p.y - cy);
+      const cf = Math.min(1, dc / (Math.min(W, H) * 0.15));
+
+      ctx.globalAlpha = baseA * (0.35 + cf * 0.65);
+      ctx.strokeStyle = pal[p.ci % pal.length];
+      ctx.lineWidth = p.w;
+      ctx.lineCap = 'round';
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+    }
+
+    ctx.globalAlpha = 1;
+    requestAnimationFrame(frame);
+  }
+
+  frame();
+}
+
+/**
+ * Scroll Typewriter Effect — triggers typing animation when elements
+ * scroll into view. Each call creates a fresh observer so it works
+ * correctly after language switches.
+ */
+let _twObserver = null;
+
+function initScrollTypewriter() {
+  const elements = document.querySelectorAll('[data-typewrite]');
+  if (!elements.length) return;
+
+  if (_twObserver) {
+    _twObserver.disconnect();
+  }
+
+  _twObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.dataset.typewritingDone) {
+          typewriteElement(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+
+  elements.forEach((el) => {
+    if (el.dataset.typewritingDone) {
+      el.classList.add('typewriting-ready');
+    } else {
+      _twObserver.observe(el);
+    }
+  });
+}
+
+function typewriteElement(el) {
+  // Make element immediately visible when typewriting starts
+  el.classList.add('typewriting-ready');
+
+  // Guard against double-firing
+  if (el.dataset.typewritingDone) return;
+  el.dataset.typewritingDone = 'true';
+  if (_twObserver) _twObserver.unobserve(el);
+
+  // Capture current rendered HTML and extract plain text
+  const fullHtml = el.innerHTML;
+  const tmp = document.createElement('div');
+  tmp.innerHTML = fullHtml;
+  const fullText = tmp.textContent || '';
+
+  if (!fullText.trim()) return;
+
+  // --- Phase 1: type character by character ---
+  const typingSpan = document.createElement('span');
+  const cursor = document.createElement('span');
+  cursor.className = 'typewriter-cursor';
+
+  el.textContent = '';          // clear visible text
+  el.appendChild(typingSpan);   // span for typing
+  el.appendChild(cursor);       // blinking cursor
+
+  let i = 0;
+  const speed = fullText.length > 80 ? 15 : 25;
+
+  function tick() {
+    i++;
+    typingSpan.textContent = fullText.slice(0, i);
+
+    if (i < fullText.length) {
+      setTimeout(tick, speed);
+    } else {
+      // --- Phase 2: restore original HTML (with <strong> etc.) ---
+      el.innerHTML = fullHtml;
+      const endCursor = document.createElement('span');
+      endCursor.className = 'typewriter-cursor';
+      el.appendChild(endCursor);
+      setTimeout(() => {
+        if (endCursor.parentNode) endCursor.remove();
+      }, 1200);
     }
   }
 
-  setInterval(draw, 35);
+  tick();
 }
 
 /**
@@ -442,3 +739,64 @@ function initMobileMenu() {
     });
   }
 }
+
+/**
+ * Card Scroll Reveal Fade-In Animation Handler
+ */
+function initCardReveal() {
+  const cards = document.querySelectorAll(
+    '.project-card, .cv-card, .skill-category, .about-content-card, .about-photo-wrapper, .contact-card, .hero-avatar-card'
+  );
+
+  if (!cards.length) return;
+
+  const cardObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('revealed');
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.02, rootMargin: '0px 0px 50px 0px' }
+  );
+
+  cards.forEach((card) => {
+    card.classList.add('scroll-reveal-card', 'revealed');
+    cardObserver.observe(card);
+  });
+}
+
+/**
+ * Smooth Hero Avatar Dissolve & Parallax on Scroll
+ */
+function initHeroScrollParallax() {
+  const heroAvatar = document.querySelector('.hero-atlas-avatar-img');
+  const heroLoad = document.querySelector('.hero-supported-load');
+
+  if (!heroAvatar) return;
+
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const heroHeight = window.innerHeight * 0.85;
+
+    if (scrollY <= heroHeight) {
+      const progress = scrollY / heroHeight;
+      const translateY = progress * 140;
+      const opacity = Math.max(0, 1 - progress * 1.5);
+
+      heroAvatar.style.transform = `translateY(${translateY}px)`;
+      heroAvatar.style.opacity = opacity;
+
+      if (heroLoad) {
+        heroLoad.style.transform = `translateY(${progress * -40}px)`;
+        heroLoad.style.opacity = opacity;
+      }
+    }
+  }, { passive: true });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  initHeroScrollParallax();
+});

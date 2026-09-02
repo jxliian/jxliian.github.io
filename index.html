@@ -9,15 +9,18 @@
   <meta name="author" content="Julian Carrión">
   <title>Julian Carrión · Ingeniería Informática & ADE</title>
 
-  <!-- Google Fonts: Plus Jakarta Sans, Inter & JetBrains Mono -->
+  <!-- Google Fonts: Fredoka, Space Grotesk, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fredoka:wght@700;900&family=JetBrains+Mono:wght@400;500;600&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Space+Grotesk:wght@500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- Favicon Dinosaur -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🦖</text></svg>">
+
+  <!-- Devicon CDN for Tech Icons -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
 
   <!-- CSS Stylesheets -->
   <link rel="stylesheet" href="css/variables.css">
@@ -26,8 +29,20 @@
 
 <body>
 
-  <!-- Background Matrix Rain Canvas -->
-  <canvas id="matrix-canvas"></canvas>
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-logo">
+        <span class="preloader-dot"></span>
+        <span class="preloader-text">Julian Carrión</span>
+      </div>
+      <div class="preloader-spinner"></div>
+      <p class="preloader-status" id="preloader-status-text">Cargando portafolio...</p>
+    </div>
+  </div>
+
+  <!-- Interactive Particles Canvas -->
+  <canvas id="particle-canvas"></canvas>
 
   <!-- Floating Navigation Bar -->
   <header>
@@ -54,62 +69,36 @@
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero Section (Atlas Composition Stage) -->
   <section class="hero-section" id="hero">
     <div class="container">
-      <div class="hero-grid">
-
-        <!-- Hero Text -->
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="hero-badge-pulse"></span>
-            <span data-i18n="heroBadge">Estudiante de Doble Grado Informática + ADE @ UGR</span>
-          </div>
-
-          <h1 class="hero-title" data-i18n="heroTitle">
-            Ingeniería Informática y Administración de Empresas
-          </h1>
-
-          <p class="hero-tagline" data-i18n="heroTagline">Always learning</p>
-
-          <p class="hero-bio" data-i18n="heroBio">
-            Soy <strong>Julian Carrión</strong> (jxliian), estudiante de 21 años del doble grado en Ingeniería
-            Informática y Administración de Empresas en la Universidad de Granada. Apasionado por la ingeniería de
-            software, la programación de sistemas y el análisis de datos.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#projects" class="btn-primary">
+      <div class="hero-atlas-container">
+        
+        <!-- Upper Floating Load (Supported by Avatar) -->
+        <div class="hero-supported-load">
+          <!-- Modern Mini-Buttons ABOVE Title -->
+          <div class="hero-actions-top-mini">
+            <a href="#projects" class="mini-btn mini-btn-primary">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
               <span data-i18n="btnViewProjects">Ver Proyectos</span>
             </a>
-            <button class="btn-secondary js-copy-email">
+            <button class="mini-btn mini-btn-glass js-copy-email">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
               <span data-i18n="btnCopyEmail">Copiar Email</span>
             </button>
           </div>
 
-          <!-- Hero Key Stats -->
-          <div class="hero-stats">
-            <div class="stat-item">
-              <span class="stat-number">21</span>
-              <span class="stat-label" data-i18n="statAgeLabel">Años de Edad</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-i18n="statDegree">Doble Grado</span>
-              <span class="stat-label" data-i18n="statDegreeLabel">Informática + ADE</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number" data-i18n="statLocation">Granada</span>
-              <span class="stat-label" data-i18n="statLocationLabel">Ubicación, España</span>
-            </div>
+          <!-- 3D Inflatable Bubble Graphic Title (FEELS LOUDER Inspired) -->
+          <div class="hero-3d-title-wrapper">
+            <img src="imgs/title_3d_bubble_es.png" alt="El software exacto que tu negocio necesita" class="hero-3d-title-img js-hero-3d-title-img">
+            <h1 class="sr-only" data-i18n="heroTitle">El software exacto que tu negocio necesita</h1>
           </div>
         </div>
 
-        <!-- Hero Avatar Portrait (Bigger Image) -->
-        <div class="hero-avatar-container">
-          <div class="hero-avatar-glow"></div>
-          <div class="hero-avatar-card">
-            <img src="imgs/Gemini_Generated_Image_.png" alt="Julian Carrión Avatar" class="hero-avatar-img">
-          </div>
+        <!-- Lower Avatar Supporting the Load -->
+        <div class="hero-atlas-avatar-wrapper">
+          <div class="hero-avatar-glow-stage"></div>
+          <img src="imgs/atlas_memoji_boxy_blue_hoodie.png" alt="Julian Carrión Atlas Avatar" class="hero-atlas-avatar-img">
         </div>
 
       </div>
@@ -121,8 +110,8 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="section-subtitle" data-i18n="aboutSubtitle">Trayectoria y Visión</span>
-        <h2 class="section-title" data-i18n="aboutTitle">Sobre mí</h2>
+        <span class="section-subtitle" data-i18n="aboutSubtitle" data-typewrite>Trayectoria y Visión</span>
+        <h2 class="section-title" data-i18n="aboutTitle" data-typewrite>Sobre mí</h2>
         <p class="section-description" data-i18n="aboutDesc">Combinando la capacidad analítica del desarrollo con la
           visión estratégica de negocio.</p>
       </div>
@@ -182,8 +171,8 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="section-subtitle" data-i18n="projectsSubtitle">Proyectos Destacados</span>
-        <h2 class="section-title" data-i18n="projectsTitle">Proyectos</h2>
+        <span class="section-subtitle" data-i18n="projectsSubtitle" data-typewrite>Proyectos Destacados</span>
+        <h2 class="section-title" data-i18n="projectsTitle" data-typewrite>Proyectos</h2>
         <p class="section-description" data-i18n="projectsDesc">Proyectos clave en aplicaciones móviles de alto rendimiento, desarrollo web, análisis
           léxico/compiladores, simulaciones y herramientas de software.</p>
       </div>
@@ -194,6 +183,9 @@
         <article class="project-card">
           <div>
             <div class="project-top">
+              <span class="project-status-tag status-in-dev" data-i18n="badgeInDev">
+                <span class="status-pulse-dot"></span> En desarrollo
+              </span>
               <div class="project-links">
                 <a href="https://github.com/jxliian/fit-tracker" target="_blank" class="project-link-icon"
                   title="Ver repositorio en GitHub">
@@ -221,6 +213,9 @@
         <article class="project-card">
           <div>
             <div class="project-top">
+              <span class="project-status-tag status-in-dev" data-i18n="badgeInDev">
+                <span class="status-pulse-dot"></span> En desarrollo
+              </span>
               <div class="project-links">
                 <a href="https://github.com/jxliian/repasaYA" target="_blank" class="project-link-icon"
                   title="Ver repositorio en GitHub">
@@ -395,10 +390,9 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="section-subtitle" data-i18n="skillsSubtitle">Toolkit Esencial</span>
-        <h2 class="section-title" data-i18n="skillsTitle">Habilidades y Tecnologías Clave</h2>
-        <p class="section-description" data-i18n="skillsDesc">Lenguajes, sistemas y herramientas de uso diario en el
-          desarrollo de software profesional.</p>
+        <span class="section-subtitle" data-i18n="skillsSubtitle" data-typewrite>Toolkit Esencial</span>
+        <h2 class="section-title" data-i18n="skillsTitle" data-typewrite>Habilidades y Tecnologías Clave</h2>
+        <p class="section-description" data-i18n="skillsDesc">Lenguajes, sistemas y herramientas de uso diario en el desarrollo de software profesional.</p>
       </div>
 
       <div class="skills-container">
@@ -408,45 +402,59 @@
           <h3 class="skill-category-title" data-i18n="catCoreLanguages"><span>Lenguajes</span> Principales</h3>
           <div class="skills-grid-focused">
             <div class="skill-item-box">
+              <i class="devicon-typescript-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">TypeScript</span>
                 <span class="skill-item-level">Typed Mobile & Web</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-python-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">Python</span>
                 <span class="skill-item-level">Data & Automation</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-cplusplus-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">C++</span>
                 <span class="skill-item-level">Systems & Algorithmic</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-java-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">Java</span>
                 <span class="skill-item-level">OOP Architecture</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-javascript-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">JavaScript</span>
                 <span class="skill-item-level">Web Applications</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-sqlite-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">SQL / SQLite</span>
                 <span class="skill-item-level">Relational Databases</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-c-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">C</span>
                 <span class="skill-item-level">Low-Level Memory</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <i class="devicon-ruby-plain colored skill-item-icon"></i>
+              <div class="skill-item-info">
+                <span class="skill-item-name">Ruby</span>
+                <span class="skill-item-level">OOP & Scripting</span>
               </div>
             </div>
           </div>
@@ -457,33 +465,45 @@
           <h3 class="skill-category-title" data-i18n="catToolsSystems"><span>Herramientas</span>, Frameworks y Sistemas</h3>
           <div class="skills-grid-focused">
             <div class="skill-item-box">
+              <i class="devicon-react-original colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">React Native</span>
                 <span class="skill-item-level">Mobile App Dev</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-github-original colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">Git & GitHub</span>
                 <span class="skill-item-level">Version Control</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-docker-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">Docker</span>
                 <span class="skill-item-level">Containerization</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-linux-plain skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">Linux / Bash</span>
                 <span class="skill-item-level">Shell & Environment</span>
               </div>
             </div>
             <div class="skill-item-box">
+              <i class="devicon-html5-plain colored skill-item-icon"></i>
               <div class="skill-item-info">
                 <span class="skill-item-name">HTML5 / CSS3</span>
                 <span class="skill-item-level">Modern Web Standards</span>
+              </div>
+            </div>
+            <div class="skill-item-box">
+              <i class="devicon-vscode-plain colored skill-item-icon"></i>
+              <div class="skill-item-info">
+                <span class="skill-item-name">VS Code</span>
+                <span class="skill-item-level">Development IDE</span>
               </div>
             </div>
           </div>
@@ -499,10 +519,9 @@
     <div class="container">
 
       <div class="section-header">
-        <span class="section-subtitle" data-i18n="cvSubtitle">Curriculum Vitae</span>
-        <h2 class="section-title" data-i18n="cvTitle">Descargar mi CV</h2>
-        <p class="section-description" data-i18n="cvDesc">Dos versiones adaptadas y actualizadas según el perfil
-          profesional y tipo de vacante.</p>
+        <span class="section-subtitle" data-i18n="cvSubtitle" data-typewrite>Curriculum Vitae</span>
+        <h2 class="section-title" data-i18n="cvTitle" data-typewrite>Descargar mi CV</h2>
+        <p class="section-description" data-i18n="cvDesc">Dos versiones adaptadas y actualizadas según el perfil profesional y tipo de vacante.</p>
       </div>
 
       <div class="cv-grid">
@@ -521,7 +540,12 @@
           </p>
           <div class="cv-card-actions">
             <a href="cv/julian_carrion_tech_resume.pdf" target="_blank" class="btn-primary">
-              <span data-i18n="btnDownload">Descargar</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="btnDownload">Descargar CV</span>
             </a>
           </div>
         </div>
@@ -540,7 +564,12 @@
           </p>
           <div class="cv-card-actions">
             <a href="cv/julian_carrion_estudiante_casual.pdf" target="_blank" class="btn-primary btn-casual">
-              <span data-i18n="btnDownload">Descargar</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span data-i18n="btnDownload">Descargar CV</span>
             </a>
           </div>
         </div>
@@ -553,12 +582,12 @@
   <!-- Contact Section (Form + Email Copy Button) -->
   <section class="section" id="contact">
     <div class="container contact-wrapper">
-      <div class="contact-card">
-        <h2 class="contact-title" data-i18n="contactTitle">Contacto</h2>
-        <p class="contact-text" data-i18n="contactText">
-          Puedes enviarme un mensaje directamente usando el formulario o copiar mi email:
-        </p>
+      <div class="section-header">
+        <h2 class="section-title" data-i18n="contactTitle" data-typewrite>Contacto</h2>
+        <p class="section-description" data-i18n="contactText">Puedes enviarme un mensaje directamente usando el formulario o copiar mi email:</p>
+      </div>
 
+      <div class="contact-card">
         <!-- Form -->
         <form id="portfolio-contact-form" class="contact-form">
           <div class="form-row">
@@ -606,6 +635,12 @@
       </div>
     </div>
   </section>
+
+  <!-- Floating Bottom-Left Open to Work Widget -->
+  <a href="#contact" class="floating-work-badge" id="floatingWorkBadge">
+    <span class="work-pulse-dot"></span>
+    <span class="floating-work-text" data-i18n="floatingWorkText">¡Buscando trabajo! Contacta conmigo 💼</span>
+  </a>
 
   <!-- Clean Footer (Removed Antigravity reference) -->
   <footer class="footer">
