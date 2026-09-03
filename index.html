@@ -68,40 +68,47 @@
     </nav>
   </header>
 
-  <!-- Hero Section (Atlas Composition Stage) -->
+  <!-- Hero Section (Full Video & Interactive Avatar Landing) -->
   <section class="hero-section" id="hero">
-    <div class="container">
-      <div class="hero-atlas-container">
-        
-        <!-- Upper Floating Load (Supported by Avatar) -->
-        <div class="hero-supported-load">
-          <!-- Modern Mini-Buttons ABOVE Title -->
-          <div class="hero-actions-top-mini">
-            <a href="#projects" class="mini-btn mini-btn-primary">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
-              <span data-i18n="btnViewProjects">Ver Proyectos</span>
-            </a>
-            <button class="mini-btn mini-btn-glass js-copy-email">
-              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-              <span data-i18n="btnCopyEmail">Copiar Email</span>
-            </button>
-          </div>
+    <!-- Full-Bleed Interactive Video & Canvas Stage covering the entire landing -->
+    <div class="hero-video-stage-wrapper" aria-hidden="true">
+      <div class="hero-avatar-glow-stage"></div>
+      <canvas id="hero-character-canvas" class="hero-interactive-canvas" aria-label="Julian Carrión Interactive Avatar"></canvas>
+    </div>
 
-          <!-- 3D Inflatable Bubble Graphic Title (FEELS LOUDER Inspired) -->
-          <div class="hero-3d-title-wrapper">
-            <img src="imgs/title_3d_bubble_es.png" alt="El software exacto que tu negocio necesita" class="hero-3d-title-img js-hero-3d-title-img">
-            <h1 class="sr-only" data-i18n="heroTitle">El software exacto que tu negocio necesita</h1>
-          </div>
+    <div class="container hero-content-container">
+      <div class="hero-left-content">
+        <!-- Work Status Badge (Top-Left of Landing) -->
+        <a href="#contact" class="hero-work-badge">
+          <span class="work-pulse-dot"></span>
+          <span data-i18n="floatingWorkText">¡Buscando trabajo! Contacta conmigo</span>
+        </a>
+
+        <!-- Action Mini-Buttons directly below Work Badge -->
+        <div class="hero-actions-top-mini">
+          <a href="#projects" class="mini-btn mini-btn-primary">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M7 17L17 7M17 7H7M17 7V17"/></svg>
+            <span data-i18n="btnViewProjects">Ver Proyectos</span>
+          </a>
+          <button class="mini-btn mini-btn-glass js-copy-email">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            <span data-i18n="btnCopyEmail">Copiar Email</span>
+          </button>
         </div>
 
-        <!-- Lower Avatar Supporting the Load -->
-        <div class="hero-atlas-avatar-wrapper">
-          <div class="hero-avatar-glow-stage"></div>
-          <img src="imgs/atlas_memoji_boxy_blue_hoodie.png" alt="Julian Carrión Atlas Avatar" class="hero-atlas-avatar-img">
+        <!-- Clean HTML Headline Title in Bubble Italic -->
+        <div class="hero-title-clean-wrapper">
+          <h1 class="hero-clean-headline" data-i18n="heroTitle">El software exacto que tu negocio necesita</h1>
         </div>
-
       </div>
     </div>
+
+    <!-- Small Bouncing Scroll-Down Arrow Indicator -->
+    <a href="#about" class="hero-scroll-down" aria-label="Ir a la siguiente sección">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M6 9l6 6 6-6"/>
+      </svg>
+    </a>
   </section>
 
   <!-- About Me Section (Centered Photo Layout) -->
@@ -638,7 +645,7 @@
   <!-- Floating Bottom-Left Open to Work Widget -->
   <a href="#contact" class="floating-work-badge" id="floatingWorkBadge">
     <span class="work-pulse-dot"></span>
-    <span class="floating-work-text" data-i18n="floatingWorkText">¡Buscando trabajo! Contacta conmigo 💼</span>
+    <span class="floating-work-text" data-i18n="floatingWorkText">¡Buscando trabajo! Contacta conmigo</span>
   </a>
 
   <!-- Clean Footer (Removed Antigravity reference) -->

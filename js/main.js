@@ -81,7 +81,7 @@ const translations = {
     cvCasualDesc: "Modern, visual Canva-style layout featuring profile photograph. Geared towards customer-facing roles, C1 English fluency, summer jobs, internships, and hospitality.",
     btnDownload: "Download CV",
     badgeInDev: "In development",
-    floatingWorkText: "Open to work! Contact me 💼",
+    floatingWorkText: "Open to work! Contact me",
 
     contactTitle: "Contact Me",
     contactText: "Feel free to reach out directly using the form below or drop an email!",
@@ -179,7 +179,7 @@ const translations = {
     cvCasualDesc: "Diseño moderno y visual con fotografía personal. Encaminado a puestos de atención al público (inglés C1), hostelería, comercio, prácticas y ofertas para estudiantes de verano.",
     btnDownload: "Descargar CV",
     badgeInDev: "En desarrollo",
-    floatingWorkText: "¡Buscando trabajo! Contacta conmigo 💼",
+    floatingWorkText: "¡Buscando trabajo! Contacta conmigo",
 
     contactTitle: "Contacto",
     contactText: "Puedes enviarme un mensaje directamente usando el formulario o copiar mi email:",
@@ -215,6 +215,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initContactForm();
   initInteractiveParticles();
+  initInteractiveCharacterVideo();
+  initHeroLayoutScrollToggle();
   // Typewriter MUST init after language is set, with a small delay
   // to let the DOM settle after setLanguage writes innerHTML
   setTimeout(() => {
@@ -257,13 +259,6 @@ function setLanguage(lang) {
       el.innerHTML = translations[lang][key];
     }
   });
-
-  // Dynamic 3D Inflatable Graphic Title Image (Using English 3D graphic asset for both languages)
-  const hero3dImg = document.querySelector('.js-hero-3d-title-img');
-  if (hero3dImg) {
-    hero3dImg.src = 'imgs/title_3d_bubble_en.png';
-    hero3dImg.alt = translations[lang] && translations[lang]['heroTitle'] ? translations[lang]['heroTitle'] : 'The exact software your business needs';
-  }
 
   // Reset typewriter elements so they re-animate on next scroll
   document.querySelectorAll('[data-typewrite]').forEach(el => {
@@ -415,6 +410,17 @@ function initInteractiveParticles() {
   const canvas = document.getElementById('particle-canvas');
   if (!canvas) return;
   const ctx = canvas.getContext('2d');
+
+  // Disable particle canvas background in hero section, enable when scrolling down
+  function updateParticleVisibility() {
+    if (window.scrollY < window.innerHeight * 0.7) {
+      canvas.style.opacity = '0';
+    } else {
+      canvas.style.opacity = '0.65';
+    }
+  }
+  window.addEventListener('scroll', updateParticleVisibility, { passive: true });
+  updateParticleVisibility();
 
   const dpr = window.devicePixelRatio || 1;
   let W, H;
@@ -776,3 +782,274 @@ function initHeroScrollParallax() {
 document.addEventListener('DOMContentLoaded', () => {
   initHeroScrollParallax();
 });
+
+/**
+ * High-Performance Interactive Character Video / Canvas Controller
+ * Pre-caches 120 high-fidelity WebP frames extracted from video.mp4 (360° gaze trajectory)
+ * Uses physics-based LERP interpolation with velocity clamping for ultra-fluid, natural tracking
+ */
+function initInteractiveCharacterVideo() {
+  const canvas = document.getElementById('hero-character-canvas');
+  if (!canvas) return;
+
+  const ctx = canvas.getContext('2d', { alpha: true });
+  const TOTAL_FRAMES = 120;
+  const frames = new Array(TOTAL_FRAMES);
+
+  // High-performance canvas resolution
+  canvas.width = 1920;
+  canvas.height = 1080;
+
+  let framesLoaded = 0;
+  let currentRenderedIndex = -1;
+
+  // LERP and physics tracking state
+  let currentU = 0;
+  let currentV = 0;
+  let targetU = 0;
+  let targetV = 0;
+  const POINTER_LERP = 0.12;
+
+  // Displayed frame with circular velocity limiting (prevents acceleration / wild spins)
+  let displayedFrame = 0.0;
+  const MAX_FRAME_SPEED = 1.6; // Max 1.6 frames per 16ms tick (~96 fps rotation pace)
+
+  // Idle and blinking state
+  let lastMouseMoveTime = Date.now();
+  let isBlinking = false;
+  let blinkStartTime = 0;
+  let nextBlinkTime = Date.now() + 3500;
+
+  // Helper: Draw frame with zero-flicker nearest-frame fallback
+  function drawFrame(idx) {
+    if (idx === currentRenderedIndex && !isBlinking) return;
+
+    let img = frames[idx];
+    if (!img || !img.complete) {
+      // Find closest already-loaded frame to prevent any blank flashes
+      for (let offset = 1; offset < TOTAL_FRAMES; offset++) {
+        const prev = (idx - offset + TOTAL_FRAMES) % TOTAL_FRAMES;
+        if (frames[prev] && frames[prev].complete) {
+          img = frames[prev];
+          break;
+        }
+        const next = (idx + offset) % TOTAL_FRAMES;
+        if (frames[next] && frames[next].complete) {
+          img = frames[next];
+          break;
+        }
+      }
+    }
+
+    if (img && img.complete) {
+      ctx.clearRect(0, 0, 1920, 1080);
+      ctx.drawImage(img, 0, 0, 1920, 1080);
+      currentRenderedIndex = idx;
+    }
+  }
+
+  // Preload frame 0 (frame_001.webp) immediately for zero perceived latency
+  const firstFrame = new Image();
+  firstFrame.src = 'imgs/character_frames/frame_001.webp';
+  firstFrame.onload = () => {
+    frames[0] = firstFrame;
+    framesLoaded++;
+    drawFrame(0);
+
+    // Asynchronously preload remaining 119 frames in background
+    for (let i = 1; i < TOTAL_FRAMES; i++) {
+      const img = new Image();
+      const padIndex = String(i + 1).padStart(3, '0');
+      img.src = `imgs/character_frames/frame_${padIndex}.webp`;
+      img.onload = () => {
+        frames[i] = img;
+        framesLoaded++;
+      };
+    }
+  };
+
+  // State variables for Center (Neutral) vs Orbital tracking
+  let inCenterZone = true;
+  const R_ENTER_CENTER = 0.20; // Hysteresis inner threshold: enter neutral center
+  const R_EXIT_CENTER = 0.28;  // Hysteresis outer threshold: exit to orbital tracking
+
+  // Convert 360-degree angle to perimeter frame along video's circular sweep
+  function getPerimeterFrame(deg) {
+    if (deg <= 225) {
+      // 0° (Right: frame 84) -> 225° (Up-Left: frame 21)
+      // Smooth continuous sweep: 84 -> 72 (Down-Right) -> 60 (Down) -> 48 (Down-Left) -> 36 (Left) -> 21 (Up-Left)
+      return 84 - (deg / 225) * (84 - 21);
+    } else if (deg >= 270) {
+      // 270° (Up: frame 108) -> 360° (Right: frame 84)
+      // Smooth continuous sweep: 108 (Up) -> 96 (Up-Right) -> 84 (Right)
+      return 108 - ((deg - 270) / 90) * (108 - 84);
+    } else {
+      // 225° to 270° (Up-Left to Up)
+      // Bypasses blink frames (12-13) and transitions seamlessly across upper arc
+      const t = (deg - 225) / 45;
+      if (t < 0.5) {
+        return 21 - (t * 2) * (21 - 16);
+      } else {
+        return 114 - ((t - 0.5) * 2) * (114 - 108);
+      }
+    }
+  }
+
+  // Pointer position update
+  function updatePointer(clientX, clientY) {
+    lastMouseMoveTime = Date.now();
+    const isDesktop = window.innerWidth > 768;
+    const faceX = window.innerWidth / 2 + (isDesktop ? Math.min(320, Math.max(160, window.innerWidth * 0.20)) : 0);
+    const faceY = window.innerHeight * 0.32;
+
+    targetU = (clientX - faceX) / (window.innerWidth * 0.46);
+    targetV = (clientY - faceY) / (window.innerHeight * 0.46);
+
+    // Clamp normalized bounds
+    targetU = Math.max(-1.3, Math.min(1.3, targetU));
+    targetV = Math.max(-1.3, Math.min(1.3, targetV));
+  }
+
+  window.addEventListener('mousemove', (e) => {
+    updatePointer(e.clientX, e.clientY);
+  }, { passive: true });
+
+  document.addEventListener('mousemove', (e) => {
+    updatePointer(e.clientX, e.clientY);
+  }, { passive: true });
+
+  window.addEventListener('touchmove', (e) => {
+    if (e.touches && e.touches[0]) {
+      updatePointer(e.touches[0].clientX, e.touches[0].clientY);
+    }
+  }, { passive: true });
+
+  // When cursor leaves viewport, smoothly return gaze to user
+  window.addEventListener('mouseleave', () => {
+    targetU = 0;
+    targetV = 0;
+  });
+
+  // Pause loop when scrolled offscreen for battery/GPU efficiency
+  let isVisible = true;
+  function handleScrollVisibility() {
+    isVisible = window.scrollY < window.innerHeight * 1.1;
+  }
+  window.addEventListener('scroll', handleScrollVisibility, { passive: true });
+
+  // Main 60 FPS animation render loop with dual-mode decoupled gaze tracking
+  function renderLoop() {
+    if (isVisible) {
+      const now = Date.now();
+
+      // Idle gaze return if no mouse movement for 3.2 seconds
+      if (now - lastMouseMoveTime > 3200) {
+        targetU += (0 - targetU) * 0.04;
+        targetV += (0 - targetV) * 0.04;
+
+        // Periodic natural blink when idle looking at user
+        if (!isBlinking && now > nextBlinkTime) {
+          const dist = Math.sqrt(currentU * currentU + currentV * currentV);
+          if (dist < 0.16) {
+            isBlinking = true;
+            blinkStartTime = now;
+          }
+        }
+      }
+
+      // Physics LERP on pointer coordinates
+      currentU += (targetU - currentU) * POINTER_LERP;
+      currentV += (targetV - currentV) * POINTER_LERP;
+
+      const dist = Math.sqrt(currentU * currentU + currentV * currentV);
+
+      // Decoupled Mode Switching with Hysteresis (prevents any boundary flicker)
+      if (inCenterZone) {
+        if (dist > R_EXIT_CENTER) {
+          inCenterZone = false;
+        }
+      } else {
+        if (dist < R_ENTER_CENTER) {
+          inCenterZone = true;
+        }
+      }
+
+      let finalDrawIndex = 0;
+
+      if (inCenterZone) {
+        // --- 1. NEUTRAL CENTER MODE ---
+        // Character looks directly forward at user (Frame 0).
+        // Complete decoupling from atan2: eliminates 100% of the 180° singularity
+        // and completely prevents traversing bottom (60) or top (108) frames when crossing horizontally.
+        finalDrawIndex = 0;
+
+        // Pre-synchronize displayedFrame to the current radial angle
+        // so that when exiting the center zone, motion begins instantly with zero lag or spin
+        if (dist > 0.04) {
+          let deg = Math.atan2(currentV, currentU) * (180 / Math.PI);
+          if (deg < 0) deg += 360;
+          displayedFrame = getPerimeterFrame(deg);
+        }
+      } else {
+        // --- 2. ORBITAL PERIMETER MODE ---
+        // Away from the center singularity: calculate polar angle safely
+        let deg = Math.atan2(currentV, currentU) * (180 / Math.PI);
+        if (deg < 0) deg += 360;
+
+        const targetPerim = getPerimeterFrame(deg);
+
+        // Shortest circular difference along the perimeter loop [-60, +60]
+        let diff = targetPerim - displayedFrame;
+        diff = ((diff + 60.0) % 120.0 + 120.0) % 120.0 - 60.0;
+
+        // Natural velocity limiter along perimeter arc
+        const step = Math.sign(diff) * Math.min(Math.abs(diff) * 0.22, MAX_FRAME_SPEED);
+        displayedFrame = (displayedFrame + step + 120.0) % 120.0;
+
+        finalDrawIndex = Math.round(displayedFrame) % TOTAL_FRAMES;
+      }
+
+      // Gentle natural blink animation (only when facing user in center mode)
+      if (isBlinking && inCenterZone) {
+        const elapsed = now - blinkStartTime;
+        if (elapsed < 60) {
+          finalDrawIndex = 12;
+        } else if (elapsed < 140) {
+          finalDrawIndex = 13;
+        } else if (elapsed < 200) {
+          finalDrawIndex = 12;
+        } else {
+          isBlinking = false;
+          nextBlinkTime = now + 4000 + Math.random() * 3000;
+        }
+      }
+
+      drawFrame(finalDrawIndex);
+    }
+
+    requestAnimationFrame(renderLoop);
+  }
+
+  requestAnimationFrame(renderLoop);
+}
+
+/**
+ * Hero Layout Scroll Toggle
+ * Toggles 'hero-mode' class on <body>:
+ * - At Hero section: Navbar at BOTTOM, Work Badge at TOP RIGHT
+ * - Past Hero section: Navbar at TOP, Work Badge at BOTTOM LEFT
+ */
+function initHeroLayoutScrollToggle() {
+  function checkHeroScroll() {
+    const heroThreshold = window.innerHeight * 0.6;
+    if (window.scrollY < heroThreshold) {
+      document.body.classList.add('hero-mode');
+    } else {
+      document.body.classList.remove('hero-mode');
+    }
+  }
+
+  window.addEventListener('scroll', checkHeroScroll, { passive: true });
+  checkHeroScroll();
+}
+
