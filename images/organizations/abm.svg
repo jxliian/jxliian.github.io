@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 72" width="160" height="72">
+  <rect width="160" height="72" rx="10" fill="#ffffff" />
+  <g transform="translate(10, 14)">
+    <rect x="2" y="2" width="40" height="40" rx="8" fill="#6d28d9" />
+    <circle cx="14" cy="16" r="4" fill="#ddd6fe" />
+    <circle cx="30" cy="16" r="4" fill="#ddd6fe" />
+    <circle cx="22" cy="30" r="5" fill="#f5d0fe" />
+    <line x1="14" y1="16" x2="22" y2="30" stroke="#ddd6fe" stroke-width="1.5" />
+    <line x1="30" y1="16" x2="22" y2="30" stroke="#ddd6fe" stroke-width="1.5" />
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#4c1d95">ABM Lab</text>
+    <text x="50" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#7c3aed">Social Sim / Mesa</text>
+  </g>
+</svg>

@@ -1,0 +1,124 @@
+/* ========================================================
+   Interactive Jolteon Pokémon Companion
+   ======================================================== */
+
+#site-jolteon {
+    position: fixed;
+    bottom: 25px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    z-index: 9999;
+    pointer-events: auto;
+    cursor: pointer;
+    visibility: visible !important;
+    opacity: 1 !important;
+    display: block !important;
+    filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.28));
+    will-change: transform;
+    transition: filter 0.2s ease;
+}
+
+#site-jolteon:hover {
+    filter: drop-shadow(0 0 14px rgba(250, 204, 21, 0.95)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+.jolteon-sprite-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.jolteon-sprite-img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+#site-jolteon.face-left .jolteon-sprite-img {
+    transform: scaleX(-1);
+}
+
+#site-jolteon.face-right .jolteon-sprite-img {
+    transform: scaleX(1);
+}
+
+#site-jolteon.is-dashing {
+    filter: drop-shadow(0 0 12px rgba(250, 204, 21, 0.95)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.35));
+}
+
+#site-jolteon.is-jumping .jolteon-sprite-img {
+    animation: jolteon-jump 0.5s ease;
+}
+
+@keyframes jolteon-jump {
+    0% { transform: translateY(0) scale(1); }
+    50% { transform: translateY(-28px) scale(1.15, 0.85); }
+    100% { transform: translateY(0) scale(1); }
+}
+
+#site-jolteon-sparks {
+    position: fixed;
+    inset: 0;
+    z-index: 10000;
+    pointer-events: none;
+}
+
+.electric-spark {
+    position: fixed;
+    font-size: 18px;
+    color: #facc15;
+    pointer-events: none;
+    animation: spark-fly 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    user-select: none;
+    text-shadow: 0 0 8px #eab308;
+}
+
+@keyframes spark-fly {
+    0% {
+        opacity: 1;
+        transform: translate(0, 0) scale(0.6);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(var(--tx, 15px), var(--ty, -25px)) scale(1.3);
+    }
+}
+
+.jolteon-pokeball {
+    position: fixed;
+    width: 32px;
+    height: 32px;
+    margin-left: -16px;
+    margin-top: -16px;
+    z-index: 9998;
+    pointer-events: none;
+    background-image: url("../images/jolteon/pokeball.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+@media screen and (max-width: 749px) {
+    #site-jolteon {
+        width: 65px;
+        height: 65px;
+        bottom: 12px;
+        right: 12px;
+    }
+    .jolteon-sprite-img {
+        width: 58px;
+        height: 58px;
+    }
+}

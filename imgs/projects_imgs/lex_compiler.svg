@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="12" fill="url(#bgGrad)" />
+  <rect x="30" y="30" width="740" height="440" rx="8" fill="#1e1e2e" stroke="#334155" stroke-width="2" />
+  <!-- Terminal Header -->
+  <circle cx="60" cy="60" r="7" fill="#ef4444" />
+  <circle cx="82" cy="60" r="7" fill="#f59e0b" />
+  <circle cx="104" cy="60" r="7" fill="#10b981" />
+  <text x="140" y="65" font-family="'JetBrains Mono', monospace" font-size="14" fill="#94a3b8">markdown_compiler.l &amp; scanner.cpp</text>
+  <!-- Code lines -->
+  <g font-family="'JetBrains Mono', 'Courier New', monospace" font-size="14" fill="#f8fafc">
+    <text x="60" y="120"><tspan fill="#ec4899">%top{</tspan></text>
+    <text x="60" y="150">  <tspan fill="#38bdf8">#include</tspan> <tspan fill="#a7f3d0">&lt;iostream&gt;</tspan></text>
+    <text x="60" y="180">  <tspan fill="#38bdf8">#include</tspan> <tspan fill="#a7f3d0">"markdown_ast.hpp"</tspan></text>
+    <text x="60" y="210"><tspan fill="#ec4899">%} </tspan></text>
+    <text x="60" y="250"><tspan fill="#eab308">%%</tspan></text>
+    <text x="60" y="285"><tspan fill="#f43f5e">^#{1,6}[ \t]+.*$</tspan>    { emit_header(yytext); }</text>
+    <text x="60" y="320"><tspan fill="#f43f5e">\*\*[^*]+\*\*</tspan>         { emit_bold_tag(yytext); }</text>
+    <text x="60" y="355"><tspan fill="#f43f5e">```[a-z]*\n[^`]*```</tspan>  { emit_code_fence(yytext); }</text>
+    <text x="60" y="390"><tspan fill="#f43f5e">\[([^\]]+)\]\(([^)]+)\)</tspan> { emit_anchor(yytext); }</text>
+    <text x="60" y="425"><tspan fill="#eab308">%%</tspan> <tspan fill="#64748b">// Lexer Rules Complete</tspan></text>
+  </g>
+</svg>

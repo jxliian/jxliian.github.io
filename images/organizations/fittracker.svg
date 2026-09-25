@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 72" width="160" height="72">
+  <rect width="160" height="72" rx="10" fill="#ffffff" />
+  <g transform="translate(10, 14)">
+    <rect x="2" y="2" width="40" height="40" rx="8" fill="#4338ca" />
+    <path d="M12 22 L17 22 L17 17 L27 17 L27 22 L32 22 L32 26 L27 26 L27 31 L17 31 L17 26 L12 26 Z" fill="#a5b4fc" />
+    <text x="50" y="20" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="14" font-weight="800" fill="#312e81">FitTracker</text>
+    <text x="50" y="32" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="10" font-weight="600" fill="#6366f1">Mobile &amp; SQLite</text>
+  </g>
+</svg>

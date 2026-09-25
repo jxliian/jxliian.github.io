@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141E30" />
+      <stop offset="100%" stop-color="#243B55" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" rx="12" fill="url(#bgGrad2)" />
+  <!-- Maze Grid Background Graphic -->
+  <g stroke="#3b82f6" stroke-width="4" stroke-linecap="round" opacity="0.35">
+    <line x1="80" y1="80" x2="720" y2="80" />
+    <line x1="80" y1="80" x2="80" y2="420" />
+    <line x1="80" y1="420" x2="720" y2="420" />
+    <line x1="720" y1="80" x2="720" y2="420" />
+    <line x1="200" y1="80" x2="200" y2="240" />
+    <line x1="200" y1="240" x2="360" y2="240" />
+    <line x1="360" y1="160" x2="360" y2="340" />
+    <line x1="500" y1="200" x2="640" y2="200" />
+    <line x1="500" y1="200" x2="500" y2="380" />
+    <line x1="200" y1="340" x2="360" y2="340" />
+  </g>
+  <!-- Player / Monster Tokens -->
+  <circle cx="280" cy="160" r="26" fill="#10b981" />
+  <text x="280" y="167" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">P1</text>
+  <circle cx="570" cy="290" r="26" fill="#ef4444" />
+  <text x="570" y="297" font-family="sans-serif" font-size="20" font-weight="bold" fill="#ffffff" text-anchor="middle">M</text>
+  <!-- Card info box -->
+  <rect x="180" y="380" width="440" height="80" rx="8" fill="#0f172a" stroke="#60a5fa" stroke-width="1.5" />
+  <text x="400" y="415" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f8fafc" text-anchor="middle">Irrgarten OOP Game Engine</text>
+  <text x="400" y="442" font-family="monospace" font-size="13" fill="#93c5fd" text-anchor="middle">State Machine · Java &amp; Ruby OOP Design Patterns</text>
+</svg>
