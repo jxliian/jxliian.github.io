@@ -144,6 +144,21 @@ const translations = {
         proj_casino_desc: "Fullstack online casino system developed collaboratively using a decoupled headless architecture: Python Django backend with Oracle Database (UGR) managing transactions, user sessions, and game engines (Blackjack, Roulette, Slots), integrated with a React + Vite frontend.",
         proj_casino_role: "<b>Lasaña Team</b> · Collaborative Contribution: <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
 
+        // Certificates Section
+        cert_title: "Certifications",
+        cert_badge_course: "Official Certification",
+        cert_badge_ai: "AI Development",
+        cert_badge_hours: "4 Hours",
+        cert_badge_upcoming: "In Progress",
+        cert_ia_title: "AI Development Initiation Course: The New Programmer",
+        cert_ia_desc: "Official certificate of attendance and completion for the AI Development Initiation Course ('El Nuevo Programador'), conducted by Brais Moure and Romuald Fons. Focused on integrating LLMs and generative AI tools into software engineering workflows, AI code assistants, and modern programming practices.",
+        cert_ia_role: "<b>mouredev &amp; BIG school</b> · Awarded to: <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
+        cert_ia_meta: "<b>Issued by Brais Moure &amp; Romuald Fons · Duration: 4 Hours · October 2, 2026</b>",
+        cert_upcoming_title: "Upcoming Specialized Certifications &amp; Credentials",
+        cert_upcoming_desc: "Currently preparing advanced technical certifications in Cloud Architecture, Distributed Systems, and DevOps Engineering. New verified credentials will be showcased here as they are completed.",
+        cert_upcoming_role: "<b>Continuous Professional Development</b> · <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
+        cert_upcoming_meta: "<b>In Progress · Upcoming Credentials</b>",
+
         // Open Source Section
         opensource_title: "Open Source Contributions",
         opensource_subtitle: "Coming soon, currently working on it...",
@@ -318,6 +333,21 @@ const translations = {
         proj_casino_title: "Casino Online (Lasaña Team): Plataforma de Juego Desacoplada Fullstack",
         proj_casino_desc: "Sistema de casino online desarrollado colaborativamente con arquitectura desacoplada: backend en Python Django con base de datos Oracle (UGR) para transacciones seguras, sesiones y motores de juegos (Blackjack, Ruleta, Slots), conectado a un frontend moderno en React + Vite.",
         proj_casino_role: "<b>Lasaña Team</b> · Contribución al proyecto: <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
+
+        // Certificates Section
+        cert_title: "Certificados",
+        cert_badge_course: "Certificación Oficial",
+        cert_badge_ai: "Desarrollo con IA",
+        cert_badge_hours: "4 Horas",
+        cert_badge_upcoming: "En Preparación",
+        cert_ia_title: "Curso de Iniciación al Desarrollo con IA: El Nuevo Programador",
+        cert_ia_desc: "Certificado oficial de asistencia y aprovechamiento del Curso de Desarrollo con IA Gratis ('El Nuevo Programador'), impartido por Brais Moure y Romuald Fons. Formación enfocada en la integración de modelos de lenguaje (LLMs) en los flujos de trabajo de ingeniería de software, asistentes de programación y metodologías de desarrollo con IA.",
+        cert_ia_role: "<b>mouredev y BIG school</b> · Otorgado a: <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
+        cert_ia_meta: "<b>Expedido por Brais Moure y Romuald Fons · Duración: 4 Horas · 2 de Octubre de 2026</b>",
+        cert_upcoming_title: "Próximas Certificaciones y Acreditaciones Especializadas",
+        cert_upcoming_desc: "En proceso de preparación de nuevas certificaciones técnicas y especializaciones en Arquitectura Cloud, Sistemas Distribuidos y DevOps. Próximamente se incorporarán las nuevas credenciales obtenidas.",
+        cert_upcoming_role: "<b>Formación Continua</b> · <span class=\"author-self\"><b>Julián Carrión Tovar</b></span>",
+        cert_upcoming_meta: "<b>En preparación · Próximas incorporaciones</b>",
 
         // Open Source Section
         opensource_title: "Contribuciones de Código Abierto",
