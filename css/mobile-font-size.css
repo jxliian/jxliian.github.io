@@ -1,31 +1,31 @@
 @media screen and (max-width: 749px) {
-  /* 头部 */
+  /* Header */
   .navbar-header .navbar-brand * {
     /* color: red; */
   }
   #navbar-collapse-1 * {
     /* color: red; */
   }
-  /* 标题介绍 */
+  /* Title introduction */
   .portrait-title * {
     /* color: red !important; */
   }
   .portrait-title a {
     /* color: blue !important; */
   }
-  /* 名字 */
+  /* Name */
   #about {
     /* color: red; */
   }
-  /* 简历 */
+  /* Resume */
   .col-sm-12 * {
     /* color: red !important; */
   }
-  /* 列表标题 */
+  /* List title */
   .content-title {
     /* color: red !important; */
   }
-  /* 列表内容 */
+  /* List content */
   .row.vspace-top * {
     /* color: red; */
   }

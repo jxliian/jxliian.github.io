@@ -35,7 +35,7 @@ const translations = {
         about_systems_heading: "Software Engineering &amp; Systems",
         about_systems_text: "My software projects focus on performance, reliability, and local-first architecture:<br>• For mobile engineering, <a href=\"#fittracker\"><b>FitTracker</b></a> is a local-first resistance training tracking mobile application powered by React Native and an embedded SQLite engine with deterministic 1RM overload models.<br>• For web platforms, <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a> is an educational knowledge portal providing structured university lecture notes, interactive flashcards, and exam practice modules.<br>• For computational modeling, <a href=\"#paper-abm\"><b>ABM Dynamics</b></a> is an agent-based simulation written in Python (Mesa) analyzing how income inequality dynamics impact interpersonal social networks and happiness metrics.<br>• For systems and compilers, I constructed a <a href=\"#markdown-lex\"><b>Lexical Compiler Parser</b></a> in C++ using Lex/Flex to translate Markdown syntax into clean HTML, and built <a href=\"#autoquicktest\"><b>AutoQuickTest</b></a>, an automated CLI test runner.",
         about_lang_heading: "Languages &amp; Certifications",
-        about_lang_list: "• <b>Spanish:</b> Native language (C2 proficiency).<br>• <b>English:</b> Advanced operational fluency (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>C1 Cambridge Certified</b></a>).<br>• <b>French:</b> Basic reading comprehension (understanding basic texts).<br>• <b>Chinese (Mandarin):</b> Currently learning (Elementary / HSK).",
+        about_lang_list: "• <b>Spanish:</b> Native language (C2 proficiency).<br>• <b>English:</b> Advanced operational fluency (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>C1 Cambridge Certified</b></a>).<br>• <b>French:</b> Basic reading comprehension (understanding basic texts).",
 
         // News Section
         news_title: "News",
@@ -192,11 +192,11 @@ const translations = {
         others_avail_label: "Professional Availability",
         others_avail_text: "Immediate availability for software engineering internships, part-time technical roles, and business-technology strategy projects.",
         others_lang_label: "Languages",
-        others_lang_text: "Native Spanish (C2), Certified Advanced English (C1 Cambridge English Assessment), French (understanding basic texts), and currently learning Mandarin Chinese.",
+        others_lang_text: "Native Spanish (C2), Certified Advanced English (C1 Cambridge English Assessment), and French (understanding basic texts).",
         others_fact1_label: "Fun fact 1",
         others_fact1_text: "Passionate about resistance training and biomechanics, which directly inspired me to architect FitTracker with 1RM estimation algorithms.",
         others_fact2_label: "Fun fact 2",
-        others_fact2_text: "I love traveling, exploring new cultures, and dream of traveling across Asia someday (especially Japan and China).",
+        others_fact2_text: "I love traveling, exploring new cultures, and dream of traveling across Asia someday (especially Japan).",
         others_jolteon_label: "Interactive Companion",
         others_jolteon_text: "Notice Jolteon (the Electric Pokémon) on the screen? Click or tap anywhere to toss a Pokéball and watch Jolteon dash and jump with electric sparks! ⚡"
     },
@@ -232,7 +232,7 @@ const translations = {
         about_systems_heading: "Ingeniería de Software y Sistemas",
         about_systems_text: "Mis proyectos se centran en el rendimiento, la fiabilidad y la arquitectura local-first:<br>• En ingeniería móvil, <a href=\"#fittracker\"><b>FitTracker</b></a> es una app móvil local-first para entrenamiento de fuerza con React Native y SQLite embebido con modelos deterministas de 1RM.<br>• En plataformas web, <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a> es un portal de estudio colaborativo con apuntes estructurados, flashcards interactivas y simuladores de examen.<br>• En modelado computacional, <a href=\"#paper-abm\"><b>ABM Dynamics</b></a> es una simulación basada en agentes en Python (Mesa) que analiza el impacto de la desigualdad económica en redes sociales y felicidad.<br>• En sistemas y compiladores, construí un <a href=\"#markdown-lex\"><b>Escáner Léxico y Compilador</b></a> en C++ con Lex/Flex para traducir Markdown a HTML, y desarrollé <a href=\"#autoquicktest\"><b>AutoQuickTest</b></a>, un evaluador CLI automatizado.",
         about_lang_heading: "Idiomas y Certificaciones",
-        about_lang_list: "• <b>Español:</b> Lengua materna (competencia C2).<br>• <b>Inglés:</b> Dominio operativo fluido (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>Certificación C1 Cambridge</b></a>).<br>• <b>Francés:</b> Comprensión de textos básicos.<br>• <b>Chino (Mandarín):</b> Actualmente aprendiendo (Nivel elemental / HSK).",
+        about_lang_list: "• <b>Español:</b> Lengua materna (competencia C2).<br>• <b>Inglés:</b> Dominio operativo fluido (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>Certificación C1 Cambridge</b></a>).<br>• <b>Francés:</b> Comprensión de textos básicos.",
 
         // News Section
         news_title: "Noticias",
@@ -389,11 +389,11 @@ const translations = {
         others_avail_label: "Disponibilidad Profesional",
         others_avail_text: "Disponibilidad inmediata para prácticas de ingeniería de software, puestos técnicos a tiempo parcial y proyectos estratégicos de tecnología y empresa.",
         others_lang_label: "Idiomas",
-        others_lang_text: "Español nativo (C2), Inglés avanzado certificado (C1 Cambridge English Assessment), Francés (comprensión de textos básicos) y actualmente aprendiendo Chino Mandarín.",
+        others_lang_text: "Español nativo (C2), Inglés avanzado certificado (C1 Cambridge English Assessment) y Francés (comprensión de textos básicos).",
         others_fact1_label: "Dato curioso 1",
         others_fact1_text: "Me apasiona el entrenamiento de fuerza y la biomecánica, lo que me inspiró a desarrollar FitTracker para calcular el 1RM y la sobrecarga progresiva.",
         others_fact2_label: "Dato curioso 2",
-        others_fact2_text: "Me encanta viajar, descubrir nuevas culturas y tengo el sueño de viajar por Asia algún día (especialmente Japón y China).",
+        others_fact2_text: "Me encanta viajar, descubrir nuevas culturas y tengo el sueño de viajar por Asia algún día (especialmente Japón).",
         others_jolteon_label: "Compañero Interactivo",
         others_jolteon_text: "¿Has visto a Jolteon (el Pokémon eléctrico) en la pantalla? Haz clic o toca en cualquier punto para lanzarle una Pokéball y verlo correr y saltar con chispas eléctricas! ⚡"
     }

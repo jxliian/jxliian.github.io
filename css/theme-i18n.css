@@ -131,18 +131,6 @@ table > tbody > tr:hover > th {
     letter-spacing: -0.3px;
 }
 
-#navbar-main .navbar-brand .brand-divider {
-    color: rgba(255, 255, 255, 0.45);
-    font-weight: 400;
-    margin: 0 2px;
-}
-
-#navbar-main .navbar-brand .brand-chinese {
-    color: rgba(255, 255, 255, 0.9);
-    font-size: 15px;
-    font-weight: 500;
-}
-
 @media (min-width: 992px) {
     #navbar-main .navbar-collapse {
         padding: 0;
@@ -739,10 +727,6 @@ html[data-theme="dark"] .chenliu-link {
 
 html[data-theme="dark"] .chenliu-ack {
     color: #64748b !important;
-}
-
-html[data-theme="dark"] .chinese-name {
-    color: #94a3b8 !important;
 }
 
 html[data-theme="dark"] .resume-card {
