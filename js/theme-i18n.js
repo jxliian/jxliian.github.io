@@ -31,27 +31,23 @@ const translations = {
         // Bio Section
         about_lead: "I am a double-degree student in <b>Computer Science and Business Administration (ADE)</b> at the <b><a href=\"https://www.ugr.es/\" target=\"_blank\">University of Granada (UGR)</a></b>. My academic and technical trajectory bridges low-level software engineering, systems programming, and high-performance algorithms with quantitative business modeling and product architecture.",
         about_honors_heading: "Academic Honors &amp; Distinctions",
-        about_honors_text: "Awarded university <b>Course Honors (Matrículas de Honor)</b> in both <span style=\"background-color: var(--badge-highlight-yellow); padding: 2px 5px; border-radius: 3px; font-weight: 600;\">Quantitative Techniques (9.8 / 10)</span> (statistics, probability, exploratory &amp; regression modeling) and <span style=\"background-color: var(--badge-highlight-blue); padding: 2px 5px; border-radius: 3px; font-weight: 600;\">User Interface Design (9.4 / 10)</span> (UI/UX architecture, human-computer interaction, web technologies). Graduated high school with a <b>9.9 / 10 GPA</b> (Academic Excellence Distinction) and achieved a University Entrance Examination (EBAU) score of <b>13.005 / 14.000</b> (Top 1% distinction across Andalusia).",
+        about_honors_text: "Awarded university <b>Course Honors (Matrículas de Honor)</b> in Quantitative Techniques (9.8/10) and User Interface Design (9.4/10). High school GPA of 9.9/10 (Honors Distinction) and EBAU score of 13.005/14.000 (Top 1%).",
         about_systems_heading: "Software Engineering &amp; Systems",
-        about_systems_text: "My software projects focus on performance, reliability, and local-first architecture:<br>• For mobile engineering, <a href=\"#fittracker\"><b>FitTracker</b></a> is a local-first resistance training tracking mobile application powered by React Native and an embedded SQLite engine with deterministic 1RM overload models.<br>• For web platforms, <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a> is an educational knowledge portal providing structured university lecture notes, interactive flashcards, and exam practice modules.<br>• For computational modeling, <a href=\"#paper-abm\"><b>ABM Dynamics</b></a> is an agent-based simulation written in Python (Mesa) analyzing how income inequality dynamics impact interpersonal social networks and happiness metrics.<br>• For systems and compilers, I constructed a <a href=\"#markdown-lex\"><b>Lexical Compiler Parser</b></a> in C++ using Lex/Flex to translate Markdown syntax into clean HTML, and built <a href=\"#autoquicktest\"><b>AutoQuickTest</b></a>, an automated CLI test runner.",
+        about_systems_text: "Engineering projects across software systems, web platforms, and computational modeling:<br>• <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a>: Collaborative university knowledge portal with lecture notes, flashcards, and exam modules.<br>• <a href=\"#paper-abm\"><b>ABM Dynamics</b></a>: Agent-based simulation in Python (Mesa) analyzing income inequality and social networks.<br>• <a href=\"#markdown-lex\"><b>LexDown</b></a>: C++ lexical scanner and parser built with Lex/Flex for Markdown compilation.",
         about_lang_heading: "Languages &amp; Certifications",
         about_lang_list: "• <b>Spanish:</b> Native language (C2 proficiency).<br>• <b>English:</b> Advanced operational fluency (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>C1 Cambridge Certified</b></a>).<br>• <b>French:</b> Basic reading comprehension (understanding basic texts).",
 
         // News Section
         news_title: "News",
-        news_item_1: "[09/2026] Developed and launched <b>FitTracker</b>, a local-first resistance training tracking mobile application with an embedded SQLite engine and automated progressive overload analytics.",
-        news_item_2: "[05/2026] Deployed <b>repasaYA</b>, a collaborative open study platform for university students featuring structured notes, flashcards, and exam preparation.",
-        news_item_3: "[2024] Awarded university <b>Course Honors (Matrícula de Honor)</b> in both <b>Quantitative Techniques (9.8/10)</b> and <b>User Interface Design (9.4/10)</b> at the University of Granada.",
-        news_item_4: "[2023] Developed and released <b>AutoQuickTest</b>, an automated CLI test generation and grading utility in Python &amp; C++.",
-        news_item_5: "[2022] Scored <b>13.005 / 14.000</b> in University Access Examinations (EBAU), ranking in the top 1% and matriculating in the Computer Science &amp; Business Administration Double Degree at UGR.",
+        news_item_1: "[10/2026] Actively seeking Software Engineering Internships for Summer 2027.",
 
         // Timeline Section
         timeline_exp_heading: "Projects &amp; Engineering Experience",
         timeline_edu_heading: "Education &amp; Credentials",
         timeline_exp1_title: "Systems &amp; Compilers",
-        timeline_exp1_role: "Compiler &amp; CLI Developer",
+        timeline_exp1_role: "Compiler Developer",
         timeline_exp1_date: "Sep 2023 - Mar 2024",
-        timeline_exp1_desc: "Constructed Lex/Flex lexical analyzer for Markdown parsing and AutoQuickTest CLI automated runner in C++ and Bash.",
+        timeline_exp1_desc: "Constructed Lex/Flex lexical analyzer for Markdown parsing in C++ and Bash.",
         timeline_exp2_title: "repasaYA Platform",
         timeline_exp2_role: "Creator &amp; Frontend Architect",
         timeline_exp2_date: "May 2026",
@@ -60,10 +56,6 @@ const translations = {
         timeline_exp3_role: "Simulation &amp; Data Modeler",
         timeline_exp3_date: "May 2024 - Nov 2024",
         timeline_exp3_desc: "Agent-based computational simulation in Python analyzing income inequality dynamics and interpersonal social network density impact on collective happiness.",
-        timeline_exp4_title: "FitTracker Engine",
-        timeline_exp4_role: "Lead Mobile Software Engineer",
-        timeline_exp4_date: "Oct 2024 - Present",
-        timeline_exp4_desc: "Engineered local-first resistance training tracking mobile app with React Native, TypeScript, and an embedded SQLite database.",
         timeline_edu1_title: "I.E.S. José Martín Recuerda",
         timeline_edu1_role: "High School Diploma (Social Sciences &amp; Math)",
         timeline_edu1_date: "Sep 2020 - Jun 2022",
@@ -110,10 +102,6 @@ const translations = {
 
         // Projects Section
         projects_title: "Featured Software Projects &amp; Systems",
-        proj_fittracker_title: "FitTracker: Local-first Mobile Architecture for Strength Training &amp; Progressive Overload Analytics",
-        proj_fittracker_desc: "Engineered a high-performance, local-first mobile application for resistance training tracking, progressive overload automation, and strength analytics with an embedded SQLite engine. Implemented deterministic session tracking, 1RM estimation algorithms, and autoregulated workload recommendations without cloud dependencies.",
-        proj_fittracker_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Lead Software Engineer &amp; Architect)",
-
         proj_repasaya_title: "repasaYA: Collaborative University Knowledge Sharing &amp; Active Recall Platform",
         proj_repasaya_desc: "Architected a collaborative study platform providing structured university lecture notes, interactive flashcards, and exam practice modules for university students. Engineered client-side state handling, dynamic search filtering, and responsive mobile-first interfaces.",
         proj_repasaya_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Creator &amp; Frontend Architect)",
@@ -121,14 +109,6 @@ const translations = {
         proj_qarmita_title: "La Qarmita - Cultura y Café: Cultural Experiences &amp; Local Commerce Platform",
         proj_qarmita_desc: "Comprehensive UX Case Study and digital platform connecting specialty coffee consumption with local cultural events and customer loyalty programs. Built user personas, competitive benchmarking, interactive Figma prototypes, and a deployed web interface.",
         proj_qarmita_role: "<span class=\"author-self\"><b>Julian Carrion Tovar</b></span> (UX &amp; Web Developer · DIU2.Errores404)",
-
-        proj_aqt_title: "AutoQuickTest (AQT): Automated CLI Multiple-Choice Exam Generator &amp; Test Runner",
-        proj_aqt_desc: "Built an automated CLI testing utility and exam engine in Python and C++ that ingests structured spreadsheets/databases and transforms them into interactive multiple-choice test environments with randomized questioning and millisecond benchmarking.",
-        proj_aqt_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Author &amp; Maintainer)",
-
-        proj_ssdbot_title: "SSDBot: Modular Community Discord Bot &amp; Automation Platform",
-        proj_ssdbot_desc: "Engineered a modular Discord bot in Python (AsyncIO) for community server management, external API integration, automated moderation, security enforcement, and event notification workflows.",
-        proj_ssdbot_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Lead Developer)",
 
         proj_lex_title: "LexDown: Lexical Scanner &amp; Syntax Parser for Markdown-to-HTML Compilation",
         proj_lex_desc: "Constructed a lexical scanner and syntax parser in C++ using Lex/Flex to translate Markdown syntax rules into clean, validated HTML documents. Implemented token recognition, nested block handling, code fence extraction, and lexical error recovery routines.",
@@ -194,11 +174,9 @@ const translations = {
         others_lang_label: "Languages",
         others_lang_text: "Native Spanish (C2), Certified Advanced English (C1 Cambridge English Assessment), and French (understanding basic texts).",
         others_fact1_label: "Fun fact 1",
-        others_fact1_text: "Passionate about resistance training and biomechanics, which directly inspired me to architect FitTracker with 1RM estimation algorithms.",
+        others_fact1_text: "Passionate about resistance training, biomechanics, and sports performance.",
         others_fact2_label: "Fun fact 2",
-        others_fact2_text: "I love traveling, exploring new cultures, and dream of traveling across Asia someday (especially Japan).",
-        others_jolteon_label: "Interactive Companion",
-        others_jolteon_text: "Notice Jolteon (the Electric Pokémon) on the screen? Click or tap anywhere to toss a Pokéball and watch Jolteon dash and jump with electric sparks! ⚡"
+        others_fact2_text: "I love traveling, exploring new cultures, and dream of traveling across Asia someday (especially Japan)."
     },
     es: {
         page_title: "jcartov's Homepage",
@@ -228,27 +206,23 @@ const translations = {
         // Bio Section
         about_lead: "Soy estudiante del doble grado en <b>Ingeniería Informática y Administración y Dirección de Empresas (ADE)</b> en la <b><a href=\"https://www.ugr.es/\" target=\"_blank\">Universidad de Granada (UGR)</a></b>. Mi trayectoria académica y técnica une la ingeniería de software de bajo nivel, la programación de sistemas y los algoritmos de alto rendimiento con el modelado cuantitativo empresarial y el diseño de producto.",
         about_honors_heading: "Honores Académicos y Distinciones",
-        about_honors_text: "Obtuve <b>Matrícula de Honor</b> universitaria tanto en <span style=\"background-color: var(--badge-highlight-yellow); padding: 2px 5px; border-radius: 3px; font-weight: 600;\">Técnicas Cuantitativas (9,8 / 10)</span> (estadística, probabilidad y modelos de regresión) como en <span style=\"background-color: var(--badge-highlight-blue); padding: 2px 5px; border-radius: 3px; font-weight: 600;\">Diseño de Interfaces de Usuario (9,4 / 10)</span> (arquitectura UX/UI, interacción persona-ordenador y tecnologías web). Graduado en Bachillerato con media de <b>9,9 / 10</b> (Matrícula de Honor) y una calificación en Selectividad (EBAU) de <b>13,005 / 14,000</b> (Top 1% de Andalucía).",
+        about_honors_text: "<b>Matrículas de Honor</b> universitarias en Técnicas Cuantitativas (9,8/10) y Diseño de Interfaces de Usuario (9,4/10). Bachillerato con 9,9/10 (Matrícula de Honor) y nota EBAU de 13,005/14,000 (Top 1% de Andalucía).",
         about_systems_heading: "Ingeniería de Software y Sistemas",
-        about_systems_text: "Mis proyectos se centran en el rendimiento, la fiabilidad y la arquitectura local-first:<br>• En ingeniería móvil, <a href=\"#fittracker\"><b>FitTracker</b></a> es una app móvil local-first para entrenamiento de fuerza con React Native y SQLite embebido con modelos deterministas de 1RM.<br>• En plataformas web, <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a> es un portal de estudio colaborativo con apuntes estructurados, flashcards interactivas y simuladores de examen.<br>• En modelado computacional, <a href=\"#paper-abm\"><b>ABM Dynamics</b></a> es una simulación basada en agentes en Python (Mesa) que analiza el impacto de la desigualdad económica en redes sociales y felicidad.<br>• En sistemas y compiladores, construí un <a href=\"#markdown-lex\"><b>Escáner Léxico y Compilador</b></a> en C++ con Lex/Flex para traducir Markdown a HTML, y desarrollé <a href=\"#autoquicktest\"><b>AutoQuickTest</b></a>, un evaluador CLI automatizado.",
+        about_systems_text: "Proyectos de ingeniería de software, plataformas web y modelado computacional:<br>• <a href=\"https://repasaya.juliancarrion.dev/\" target=\"_blank\"><b>repasaYA</b></a>: Portal colaborativo de estudio universitario con apuntes, flashcards y exámenes interactivos.<br>• <a href=\"#paper-abm\"><b>ABM Dynamics</b></a>: Simulación computacional en Python (Mesa) sobre desigualdad económica y redes sociales.<br>• <a href=\"#markdown-lex\"><b>LexDown</b></a>: Escáner léxico y parser en C++ con Lex/Flex para compilación de Markdown a HTML.",
         about_lang_heading: "Idiomas y Certificaciones",
         about_lang_list: "• <b>Español:</b> Lengua materna (competencia C2).<br>• <b>Inglés:</b> Dominio operativo fluido (<a href=\"cv/julian_carrion_tech_resume.pdf\" target=\"_blank\"><b>Certificación C1 Cambridge</b></a>).<br>• <b>Francés:</b> Comprensión de textos básicos.",
 
         // News Section
         news_title: "Noticias",
-        news_item_1: "[09/2026] Desarrollo y lanzamiento de <b>FitTracker</b>, app móvil local-first para entrenamiento de fuerza con motor SQLite embebido y analítica automatizada de sobrecarga progresiva.",
-        news_item_2: "[05/2026] Despliegue de <b>repasaYA</b>, plataforma de estudio abierta y colaborativa para estudiantes universitarios con apuntes estructurados y flashcards.",
-        news_item_3: "[2024] Premio a la excelencia académica: <b>Matrícula de Honor</b> en <b>Técnicas Cuantitativas (9,8/10)</b> y en <b>Diseño de Interfaces de Usuario (9,4/10)</b> en la UGR.",
-        news_item_4: "[2023] Desarrollo y publicación de <b>AutoQuickTest</b>, una herramienta CLI de generación y verificación automatizada de tests en Python y C++.",
-        news_item_5: "[2022] Calificación de <b>13,005 / 14,000</b> en Selectividad (EBAU), situándome en el Top 1% e ingresando en el Doble Grado en Informática y ADE en la UGR.",
+        news_item_1: "[10/2026] En búsqueda activa de prácticas de ingeniería de software para el verano de 2027.",
 
         // Timeline Section
         timeline_exp_heading: "Experiencia y Proyectos de Ingeniería",
         timeline_edu_heading: "Formación Académica y Acreditaciones",
         timeline_exp1_title: "Sistemas y Compiladores",
-        timeline_exp1_role: "Desarrollador de Compiladores y CLI",
+        timeline_exp1_role: "Desarrollador de Compiladores",
         timeline_exp1_date: "Sep 2023 - Mar 2024",
-        timeline_exp1_desc: "Desarrollo de escáner léxico en Lex/Flex para Markdown y suite de pruebas CLI AutoQuickTest en C++ y Bash.",
+        timeline_exp1_desc: "Desarrollo de escáner léxico en Lex/Flex para Markdown en C++ y Bash.",
         timeline_exp2_title: "Plataforma repasaYA",
         timeline_exp2_role: "Creador y Arquitecto Frontend",
         timeline_exp2_date: "Mayo 2026",
@@ -257,10 +231,6 @@ const translations = {
         timeline_exp3_role: "Modelador de Simulación y Datos",
         timeline_exp3_date: "Mayo 2024 - Nov 2024",
         timeline_exp3_desc: "Simulación computacional basada en agentes en Python analizando la desigualdad de ingresos y la densidad de redes sociales en la felicidad colectiva.",
-        timeline_exp4_title: "Motor FitTracker",
-        timeline_exp4_role: "Ingeniero Principal de Software Móvil",
-        timeline_exp4_date: "Oct 2024 - Actualidad",
-        timeline_exp4_desc: "Desarrollo de app móvil local-first para entrenamiento de fuerza con React Native, TypeScript y SQLite embebido.",
         timeline_edu1_title: "I.E.S. José Martín Recuerda",
         timeline_edu1_role: "Bachillerato de Ciencias Sociales y Matemáticas",
         timeline_edu1_date: "Sep 2020 - Jun 2022",
@@ -307,10 +277,6 @@ const translations = {
 
         // Projects Section
         projects_title: "Proyectos de Software y Sistemas Destacados",
-        proj_fittracker_title: "FitTracker: Arquitectura Móvil Local-First para Seguimiento de Fuerza y Sobrecarga Progresiva",
-        proj_fittracker_desc: "Desarrollo de una aplicación móvil de alto rendimiento y arquitectura local-first para monitorización de entrenamiento de fuerza y sobrecarga progresiva con SQLite embebido. Implementación de algoritmos deterministas de 1RM, seguimiento de sesiones y recomendaciones autorreguladas sin dependencias en la nube.",
-        proj_fittracker_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Ingeniero Principal y Arquitecto)",
-
         proj_repasaya_title: "repasaYA: Plataforma Web Colaborativa de Apuntes y Recuerdo Activo Universitario",
         proj_repasaya_desc: "Arquitectura de plataforma web colaborativa para estudiantes universitarios con apuntes estructurados, flashcards interactivas y preparación de exámenes. Gestión de estado en cliente, filtrado dinámico y diseño responsive mobile-first enfocado a la máxima productividad.",
         proj_repasaya_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Creador y Arquitecto Frontend)",
@@ -318,14 +284,6 @@ const translations = {
         proj_qarmita_title: "La Qarmita - Cultura y Café: Experiencias Culturales y Fidelización Digital",
         proj_qarmita_desc: "Case Study de UX y plataforma digital conectando el consumo de café de especialidad con experiencias culturales locales y fidelización de clientes. Personas de usuario, benchmarking, prototipos interactivos en Figma y web en producción.",
         proj_qarmita_role: "<span class=\"author-self\"><b>Julian Carrion Tovar</b></span> (Desarrollador UX y Web · DIU2.Errores404)",
-
-        proj_aqt_title: "AutoQuickTest (AQT): Framework CLI Automatizado de Pruebas y Validación de Salida",
-        proj_aqt_desc: "Utilidad CLI para compilar, ejecutar y verificar automáticamente la salida de programas frente a baterías de pruebas con medición de milisegundos e inspección de diferencias (diffs). Optimiza la comprobación de casos límite en prácticas y programación competitiva.",
-        proj_aqt_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Autor y Desarrollador)",
-
-        proj_ssdbot_title: "SSDBot: Bot Modular para Comunidades de Discord y Automatización",
-        proj_ssdbot_desc: "Bot modular en Python (AsyncIO) para administración de servidores de Discord, integración de APIs externas, moderación automática, seguridad y flujo de eventos.",
-        proj_ssdbot_role: "<span class=\"author-self\"><b>Julián Carrión Tovar</b></span> (Desarrollador Principal)",
 
         proj_lex_title: "LexDown: Escáner Léxico y Compilador Sintáctico para Transformación Markdown a HTML",
         proj_lex_desc: "Construcción de un escáner léxico y traductor en C++ usando Lex/Flex para procesar sintaxis Markdown y generar código HTML validado. Reconocimiento de tokens, bloques anidados, bloques de código multilinea y recuperación léxica de errores.",
@@ -391,11 +349,9 @@ const translations = {
         others_lang_label: "Idiomas",
         others_lang_text: "Español nativo (C2), Inglés avanzado certificado (C1 Cambridge English Assessment) y Francés (comprensión de textos básicos).",
         others_fact1_label: "Dato curioso 1",
-        others_fact1_text: "Me apasiona el entrenamiento de fuerza y la biomecánica, lo que me inspiró a desarrollar FitTracker para calcular el 1RM y la sobrecarga progresiva.",
+        others_fact1_text: "Me apasiona el entrenamiento de fuerza, la biomecánica y el rendimiento deportivo.",
         others_fact2_label: "Dato curioso 2",
-        others_fact2_text: "Me encanta viajar, descubrir nuevas culturas y tengo el sueño de viajar por Asia algún día (especialmente Japón).",
-        others_jolteon_label: "Compañero Interactivo",
-        others_jolteon_text: "¿Has visto a Jolteon (el Pokémon eléctrico) en la pantalla? Haz clic o toca en cualquier punto para lanzarle una Pokéball y verlo correr y saltar con chispas eléctricas! ⚡"
+        others_fact2_text: "Me encanta viajar, descubrir nuevas culturas y tengo el sueño de viajar por Asia algún día (especialmente Japón)."
     }
 };
 

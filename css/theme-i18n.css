@@ -581,7 +581,7 @@ html[data-theme="dark"] .theme-toggle-btn:hover {
     border-color: #2563eb;
 }
 
-/* Compact project thumbnails (FitTracker & Discord Bot) */
+/* Compact project thumbnails */
 .project-thumb-compact {
     flex-shrink: 0;
     width: 120px;

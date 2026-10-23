@@ -66,12 +66,9 @@ I am a 21-year-old double-degree student in **Computer Science and Business Admi
 
 | Project | Description | Stack | Link |
 | :--- | :--- | :--- | :---: |
-| **FitTracker** | Local-first mobile app for resistance training tracking, progressive overload & strength analytics. | React Native, TypeScript, SQLite | [GitHub Repo](https://github.com/jxliian/fit-tracker) |
 | **repasaYA** | Educational web platform for sharing structured notes, flashcards, and exam prep. | HTML5, CSS3, JS | [Live App](https://repasaya.juliancarrion.dev/) |
 | **ABM Income & Happiness** | Agent-based computational simulation analyzing income dynamics & societal happiness. | Python, Mesa, Pandas | [Live Demo](https://juliancarrion.dev/#projects) |
 | **Markdown Lex Parser** | Lexical compiler tool converting Markdown syntax rules directly into HTML elements. | Lex / Flex, C++ | [Live Demo](https://juliancarrion.dev/#projects) |
-| **SSDBot** | Modular Discord Bot for community server management, API integrations & automation. | Python, Discord API | [Live Demo](https://juliancarrion.dev/#projects) |
-| **AutoQuickTest** | Automated software testing framework validating execution outputs against test suites. | C++, Bash | [Live Demo](https://juliancarrion.dev/#projects) |
 | **Irrgarten Engine** | Object-Oriented maze game engine supporting multi-player state logic in Java and Ruby. | Java, Ruby (OOP) | [Live Demo](https://juliancarrion.dev/#projects) |
 
 ---

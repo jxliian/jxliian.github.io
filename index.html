@@ -18,10 +18,8 @@
     <meta property="og:url" content="https://juliancarrion.dev/">
     <meta property="og:type" content="website">
 
-    <!-- Favicon Jolteon -->
-    <link rel="icon" type="image/gif" href="images/jolteon/jolteon.gif">
-    <link rel="shortcut icon" href="images/jolteon/jolteon.gif">
-    <link rel="apple-touch-icon" href="images/jolteon/jolteon.png">
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="css/highlight.min.css">
@@ -33,7 +31,6 @@
     <link rel="stylesheet" href="css/hugo-academic.css">
     <link rel="stylesheet" href="css/mobile.css">
     <link rel="stylesheet" href="css/mobile-font-size.css">
-    <link rel="stylesheet" href="css/site-jolteon.css">
     <link rel="stylesheet" href="css/theme-i18n.css">
 
     <style>
@@ -362,14 +359,6 @@
         </div>
     </div>
 
-    <!-- Interactive Jolteon Pokémon Companion -->
-    <div id="site-jolteon" class="face-left is-ready" aria-label="Jolteon the Pokémon">
-        <div class="jolteon-sprite-container" title="¡Soy Jolteon! Haz clic en la pantalla para lanzarme una Pokéball ⚡">
-            <img src="images/jolteon/jolteon.gif" alt="Jolteon" class="jolteon-sprite-img" />
-        </div>
-    </div>
-    <div id="site-jolteon-sparks" aria-hidden="true"></div>
-
     <div class="content">
         <!-- Navigation Bar -->
         <nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
@@ -539,13 +528,7 @@
                                 <font size="3">
                                     <b data-i18n="about_honors_heading">Academic Honors &amp; Distinctions</b>&nbsp;
                                     <span data-i18n="about_honors_text">
-                                        Awarded university <b>Course Honors (Matrículas de Honor)</b> in both
-                                        <span style="background-color: var(--badge-highlight-yellow); padding: 2px 5px; border-radius: 3px; font-weight: 600;">Quantitative Techniques (9.8 / 10)</span>
-                                        (statistics, probability, exploratory &amp; regression modeling) and
-                                        <span style="background-color: var(--badge-highlight-blue); padding: 2px 5px; border-radius: 3px; font-weight: 600;">User Interface Design (9.4 / 10)</span>
-                                        (UI/UX architecture, human-computer interaction, web technologies).
-                                        Graduated high school with a <b>9.9 / 10 GPA</b> (Academic Excellence Distinction) and achieved a University Entrance Examination (EBAU) score of
-                                        <b>13.005 / 14.000</b> (Top 1% distinction across Andalusia).
+                                        Awarded university <b>Course Honors (Matrículas de Honor)</b> in Quantitative Techniques (9.8/10) and User Interface Design (9.4/10). High school GPA of 9.9/10 (Honors Distinction) and EBAU score of 13.005/14.000 (Top 1%).
                                     </span>
                                 </font>
                             </p>
@@ -554,11 +537,10 @@
                                 <font size="3">
                                     <b data-i18n="about_systems_heading">Software Engineering &amp; Systems</b>&nbsp;
                                     <span data-i18n="about_systems_text">
-                                        My software projects focus on performance, reliability, and local-first architecture:<br>
-                                        • For mobile engineering, <a href="#fittracker"><b>FitTracker</b></a> is a local-first resistance training tracking mobile application powered by React Native and an embedded SQLite engine with deterministic 1RM overload models.<br>
-                                        • For web platforms, <a href="https://repasaya.juliancarrion.dev/" target="_blank"><b>repasaYA</b></a> is an educational knowledge portal providing structured university lecture notes, interactive flashcards, and exam practice modules.<br>
-                                        • For computational modeling, <a href="#paper-abm"><b>ABM Dynamics</b></a> is an agent-based simulation written in Python (Mesa) analyzing how income inequality dynamics impact interpersonal social networks and happiness metrics.<br>
-                                        • For systems and compilers, I constructed a <a href="#markdown-lex"><b>Lexical Compiler Parser</b></a> in C++ using Lex/Flex to translate Markdown syntax into clean HTML, and built <a href="#autoquicktest"><b>AutoQuickTest</b></a>, an automated CLI test runner.
+                                        Engineering projects across software systems, web platforms, and computational modeling:<br>
+                                        • <a href="https://repasaya.juliancarrion.dev/" target="_blank"><b>repasaYA</b></a>: Collaborative university knowledge portal with lecture notes, flashcards, and exam modules.<br>
+                                        • <a href="#paper-abm"><b>ABM Dynamics</b></a>: Agent-based simulation in Python (Mesa) analyzing income inequality and social networks.<br>
+                                        • <a href="#markdown-lex"><b>LexDown</b></a>: C++ lexical scanner and parser built with Lex/Flex for Markdown compilation.
                                     </span>
                                 </font>
                             </p>
@@ -587,47 +569,7 @@
 
                     <p class="news-item">
                         <font size="4">
-                            <span data-i18n="news_item_1">[09/2026] Developed and launched <b>FitTracker</b>, a local-first resistance training tracking mobile application with an embedded SQLite engine and automated progressive overload analytics.</span>
-                            <a href="https://github.com/jxliian/fit-tracker" target="_blank"
-                                style="display: inline-block; margin-left: 4px;">
-                                <img src="https://img.shields.io/badge/GitHub-FitTracker-4338ca" alt="GitHub">
-                            </a>
-                        </font>
-                    </p>
-
-                    <p class="news-item">
-                        <font size="4">
-                            <span data-i18n="news_item_2">[05/2026] Deployed <b>repasaYA</b>, a collaborative open study platform for university students featuring structured notes, flashcards, and exam preparation.</span>
-                            <a href="https://repasaya.juliancarrion.dev/" target="_blank"
-                                style="display: inline-block; margin-left: 4px;">
-                                <img src="https://img.shields.io/badge/Live_App-repasaYA-059669" alt="Live App">
-                            </a>
-                            <a href="https://github.com/jxliian/repasaYA" target="_blank"
-                                style="display: inline-block; margin-left: 4px;">
-                                <img src="https://img.shields.io/badge/GitHub-Source-181717?logo=github" alt="GitHub">
-                            </a>
-                        </font>
-                    </p>
-
-                    <p class="news-item">
-                        <font size="4">
-                            <span data-i18n="news_item_3">[2024] Awarded university <b>Course Honors (Matrícula de Honor)</b> in both <b>Quantitative Techniques (9.8/10)</b> and <b>User Interface Design (9.4/10)</b> at the University of Granada.</span>
-                        </font>
-                    </p>
-
-                    <p class="news-item">
-                        <font size="4">
-                            <span data-i18n="news_item_4">[2023] Developed and released <b>AutoQuickTest</b>, an automated CLI test generation and grading utility in Python &amp; C++.</span>
-                            <a href="https://github.com/jxliian/AutoQuickTest" target="_blank"
-                                style="display: inline-block; margin-left: 4px;">
-                                <img src="https://img.shields.io/badge/GitHub-AutoQuickTest-0284c7" alt="GitHub">
-                            </a>
-                        </font>
-                    </p>
-
-                    <p class="news-item">
-                        <font size="4">
-                            <span data-i18n="news_item_5">[2022] Scored <b>13.005 / 14.000</b> in University Access Examinations (EBAU), ranking in the top 1% and matriculating in the Computer Science &amp; Business Administration Double Degree at UGR.</span>
+                            <span data-i18n="news_item_1">[10/2026] Actively seeking Software Engineering Internships for Summer 2027.</span>
                         </font>
                     </p>
                 </div>
@@ -657,20 +599,6 @@
                                         <p class="career-role" data-i18n="timeline_exp3_role">Simulation &amp; Data Modeler</p>
                                         <p class="career-date" data-i18n="timeline_exp3_date">May 2024 - Nov 2024</p>
                                         <p data-i18n="timeline_exp3_desc">Agent-based computational simulation in Python analyzing income inequality dynamics and interpersonal social network density impact on collective happiness.</p>
-                                    </div>
-                                </li>
-                                <li class="career-card" data-start="2024-10" data-end="present"
-                                    style="--career-accent: #4338ca;">
-                                    <button class="career-logo" type="button" aria-expanded="false"
-                                        aria-controls="experience-4" aria-label="Show details for FitTracker">
-                                        <img class="career-logo-wide" src="images/organizations/fittracker.svg"
-                                            alt="FitTracker" width="160" height="72" loading="lazy">
-                                    </button>
-                                    <div class="career-detail" id="experience-4" hidden>
-                                        <h5><a href="https://github.com/jxliian/fit-tracker" target="_blank" data-i18n="timeline_exp4_title">FitTracker Engine</a></h5>
-                                        <p class="career-role" data-i18n="timeline_exp4_role">Lead Mobile Software Engineer</p>
-                                        <p class="career-date" data-i18n="timeline_exp4_date">Oct 2024 - Present</p>
-                                        <p data-i18n="timeline_exp4_desc">Engineered local-first resistance training tracking mobile app with React Native, TypeScript, and an embedded SQLite database.</p>
                                     </div>
                                 </li>
                                 <li class="career-card" data-start="2026-05" data-end="2026-08"
@@ -948,37 +876,7 @@
                 </h3>
                 <div class="table">
 
-                    <!-- Project 1: FitTracker (Compact Icon) -->
-                    <div class="project-entry" id="fittracker">
-                        <div class="project-thumb-compact">
-                            <a href="https://github.com/jxliian/fit-tracker" target="_blank">
-                                <img src="imgs/projects_imgs/fittracker_icon.png" alt="FitTracker Mobile App">
-                            </a>
-                        </div>
-                        <div class="project-details">
-                            <span class="tag-badge tag-mobile">Mobile Architecture</span>
-                            <span class="tag-badge tag-data">Embedded SQLite</span>
-                            <span class="tag-badge tag-tools">Local-First</span>
-                            <span class="tag-badge tag-systems">TypeScript</span>
-                            <h3 data-i18n="proj_fittracker_title">
-                                FitTracker: Local-first Mobile Architecture for Strength Training &amp; Progressive Overload Analytics
-                            </h3>
-                            <div class="project-actions-row">
-                                <a href="https://github.com/jxliian/fit-tracker" target="_blank" class="paper-action-link">[Code]</a>
-                            </div>
-                            <p>
-                                <font color="#00796B" data-i18n="proj_fittracker_desc">
-                                    Engineered a high-performance, local-first mobile application for resistance training tracking, progressive overload automation, and strength analytics with an embedded SQLite engine. Implemented deterministic session tracking, 1RM estimation algorithms, and autoregulated workload recommendations without cloud dependencies.
-                                </font>
-                            </p>
-                            <p class="pub-authors-line">
-                                <span class="author-self" data-i18n="proj_fittracker_role"><b>Julián Carrión Tovar</b> (Lead Software Engineer &amp; Architect)</span>
-                            </p>
-                            <p> <b>React Native (SDK 54) · TypeScript · SQLite · Mobile App</b> </p>
-                        </div>
-                    </div>
-
-                    <!-- Project 2: repasaYA -->
+                    <!-- Project 1: repasaYA -->
                     <div class="project-entry" id="repasaya">
                         <div class="project-thumb-medium">
                             <a href="https://repasaya.juliancarrion.dev/" target="_blank">
@@ -1041,67 +939,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 4: AutoQuickTest -->
-                    <div class="project-entry" id="autoquicktest">
-                        <div class="project-thumb-medium">
-                            <a href="https://github.com/jxliian/AutoQuickTest" target="_blank">
-                                <img src="imgs/projects_imgs/aqt1.png" alt="AutoQuickTest CLI">
-                            </a>
-                        </div>
-                        <div class="project-details">
-                            <span class="tag-badge tag-tools">Developer Tooling</span>
-                            <span class="tag-badge tag-systems">Python / C++</span>
-                            <span class="tag-badge tag-data">Automation</span>
-                            <span class="tag-badge tag-web">Test Validation</span>
-                            <h3 data-i18n="proj_aqt_title">
-                                AutoQuickTest (AQT): Automated CLI Multiple-Choice Exam Generator &amp; Test Runner
-                            </h3>
-                            <div class="project-actions-row">
-                                <a href="https://github.com/jxliian/AutoQuickTest" target="_blank" class="paper-action-link">[Code]</a>
-                            </div>
-                            <p>
-                                <font color="#00796B" data-i18n="proj_aqt_desc">
-                                    Built an automated CLI testing utility and exam engine in Python and C++ that ingests structured spreadsheets/databases and transforms them into interactive multiple-choice test environments with randomized questioning and millisecond benchmarking.
-                                </font>
-                            </p>
-                            <p class="pub-authors-line">
-                                <span class="author-self" data-i18n="proj_aqt_role"><b>Julián Carrión Tovar</b> (Author &amp; Maintainer)</span>
-                            </p>
-                            <p> <b>Python · C++ · Bash · Automated Testing &amp; Grading</b> </p>
-                        </div>
-                    </div>
-
-                    <!-- Project 5: SSDBot (Compact Icon) -->
-                    <div class="project-entry" id="ssdbot">
-                        <div class="project-thumb-compact">
-                            <a href="https://github.com/jxliian/SSDBot" target="_blank">
-                                <img src="imgs/projects_imgs/dcbot.png" alt="SSDBot">
-                            </a>
-                        </div>
-                        <div class="project-details">
-                            <span class="tag-badge tag-tools">Discord API</span>
-                            <span class="tag-badge tag-systems">Python</span>
-                            <span class="tag-badge tag-data">AsyncIO</span>
-                            <span class="tag-badge tag-web">Automation &amp; Security</span>
-                            <h3 data-i18n="proj_ssdbot_title">
-                                SSDBot: Modular Community Discord Bot &amp; Automation Platform
-                            </h3>
-                            <div class="project-actions-row">
-                                <a href="https://github.com/jxliian/SSDBot" target="_blank" class="paper-action-link">[Code]</a>
-                            </div>
-                            <p>
-                                <font color="#00796B" data-i18n="proj_ssdbot_desc">
-                                    Engineered a modular Discord bot in Python (AsyncIO) for community server management, external API integration, automated moderation, security enforcement, and event notification workflows.
-                                </font>
-                            </p>
-                            <p class="pub-authors-line">
-                                <span class="author-self" data-i18n="proj_ssdbot_role"><b>Julián Carrión Tovar</b> (Lead Developer)</span>
-                            </p>
-                            <p> <b>Python · Discord API · AsyncIO · Automation</b> </p>
-                        </div>
-                    </div>
-
-                    <!-- Project 6: Lex Compiler -->
+                    <!-- Project 3: Lex Compiler -->
                     <div class="project-entry" id="markdown-lex">
                         <div class="project-thumb-medium">
                             <a href="https://github.com/jxliian/markdown-to-html-lex" target="_blank">
@@ -1475,7 +1313,7 @@
                 <p style="line-height:1.6; width:90%; margin: 1% auto; padding-left: 2%;">
                     <font size="3">
                         <b data-i18n="others_fact1_label">Fun fact 1</b>&nbsp;
-                        <span data-i18n="others_fact1_text">Passionate about resistance training and biomechanics, which directly inspired me to architect FitTracker with 1RM estimation algorithms.</span>
+                        <span data-i18n="others_fact1_text">Passionate about resistance training, biomechanics, and sports performance.</span>
                     </font>
                 </p>
 
@@ -1483,13 +1321,6 @@
                     <font size="3">
                         <b data-i18n="others_fact2_label">Fun fact 2</b>&nbsp;
                         <span data-i18n="others_fact2_text">I love traveling, exploring new cultures, and dream of traveling across Asia someday (especially Japan).</span>
-                    </font>
-                </p>
-
-                <p style="line-height:1.6; width:90%; margin: 1% auto; padding-left: 2%;">
-                    <font size="3">
-                        <b data-i18n="others_jolteon_label">Interactive Companion</b>&nbsp;
-                        <span data-i18n="others_jolteon_text">Notice Jolteon (the Electric Pokémon) on the screen? Click or tap anywhere to toss a Pokéball and watch Jolteon dash and jump with electric sparks! ⚡</span>
                     </font>
                 </p>
                 <br>
@@ -1514,9 +1345,6 @@
 
     <!-- Career Cards Interactive Timeline -->
     <script src="js/career-cards.js" defer></script>
-
-    <!-- Interactive Jolteon Pet Controller -->
-    <script src="js/site-jolteon.js"></script>
 
     <!-- Theme & Language Switcher Controller -->
     <script src="js/theme-i18n.js"></script>
